@@ -1,8 +1,8 @@
 //
 //  AppDelegate.m
-//  Group 3 Project
+//  Music147_2012
 //
-//  Created by Kojiro Umezaki on 5/11/12.
+//  Created by Kojiro Umezaki on 4/21/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
@@ -11,6 +11,9 @@
 #import "ViewController.h"
 
 @implementation AppDelegate
+
+#import "Singleton.h"
+Singleton* gSing = nil;
 
 @synthesize window = _window;
 @synthesize viewController = _viewController;
@@ -26,9 +29,12 @@
     }
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
+
+    gSing = [[Singleton alloc] init];
+
     return YES;
 }
-
+							
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     /*

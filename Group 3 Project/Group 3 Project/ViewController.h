@@ -1,8 +1,8 @@
 //
 //  ViewController.h
-//  Group 3 Project
+//  Music147_2012
 //
-//  Created by Kojiro Umezaki on 5/11/12.
+//  Created by Kojiro Umezaki on 4/21/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 

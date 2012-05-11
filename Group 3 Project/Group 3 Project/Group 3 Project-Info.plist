@@ -11,7 +11,7 @@
 	<key>CFBundleIconFiles</key>
 	<array/>
 	<key>CFBundleIdentifier</key>
-	<string>edu.uci.arts.music.${PRODUCT_NAME:rfc1034identifier}</string>
+	<string>edu.uci.arts.music.music1472012g3</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
