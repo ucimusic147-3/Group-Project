@@ -1,4 +1,4 @@
-//
+// Eric
 //  MyView.h
 //  Music147_2012
 //
