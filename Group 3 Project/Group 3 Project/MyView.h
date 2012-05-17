@@ -13,7 +13,7 @@
 #import <UIKit/UIKit.h>
 
 @interface MyView : UIView {
-    
+    UITouch* touch;
 }
 
 -(IBAction)toggleVoice0:(id)sender;

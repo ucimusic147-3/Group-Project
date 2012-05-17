@@ -10,6 +10,8 @@
 
 #import "AQPlayer.h"
 
+#import "Singleton.h"
+
 extern AQPlayer *aqp;
 
 @implementation MyView
@@ -58,28 +60,41 @@ extern AQPlayer *aqp;
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    NSLog(@"%d",touches.count);
+ //   NSLog(@"%d",touches.count);
+    UInt16 y = 0;
     for (UITouch* t in touches)
     {
+  
         CGPoint pt = [t locationInView:self];
         NSLog(@"%lf,%lf",pt.x,pt.y);
+        y = pt.y;
     }
+ 
+    UInt16 note = 50 * y / 50;
+    
+    // [AQ_Synth changeNote:note];
+    NSLog(@"%d",note);
+    
     NSLog(@"%lf",event.timestamp);
+ 
+    
 }
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    NSLog(@"%d",touches.count);
+  /*  NSLog(@"%d",touches.count);
     for (UITouch* t in touches)
     {
         CGPoint pt = [t locationInView:self];
         NSLog(@"%lf,%lf",pt.x,pt.y);
     }
     NSLog(@"%lf",event.timestamp);
+   */
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
+    /*
     NSLog(@"%d",touches.count);
     for (UITouch* t in touches)
     {
@@ -87,10 +102,18 @@ extern AQPlayer *aqp;
         NSLog(@"%lf,%lf",pt.x,pt.y);
     }
     NSLog(@"%lf",event.timestamp);
+     */
 }
 
 - (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
 {
+}
+
+-(void) drawRect:(CGRect)rect
+{
+    UIColor *rectColor = [UIColor greenColor]; [rectColor set];
+ //   CGPoint pt = [touch locationInView:self];
+    UIRectFill(CGRectMake(0,0,10,10));
 }
 
 @end
