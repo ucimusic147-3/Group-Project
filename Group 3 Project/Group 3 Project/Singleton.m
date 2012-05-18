@@ -21,12 +21,12 @@
     
     aqp = [[AQPlayer_Synth alloc] init];
     
-    q = [[Sequencer alloc] init];
-    [q setBpm:133];
+ //   q = [[Sequencer alloc] init];
+ //   [q setBpm:133];
     
     /* this is temporary just to test the new sequencer code */
-    Sequence* seq = [[Sequence alloc] init];
-    [q setSeq:seq];
+ //   Sequence* seq = [[Sequence alloc] init];
+  //  [q setSeq:seq];
     
     [[UIAccelerometer sharedAccelerometer] setDelegate:self];
     

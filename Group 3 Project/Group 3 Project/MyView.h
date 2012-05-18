@@ -11,15 +11,32 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Voice.h"
+
+#define WIDTH 320.
+#define HEIGHT 460.
+#define KEYWIDTH 60
+#define MIDDLE_C 60
+#define OCTAVE_STEPS 12  // 12 semitones per octave
 
 @interface MyView : UIView {
     UITouch* touch;
+    
+    UInt16 referencePixel;
+
+    Voice* freevoice;
 }
 
 -(IBAction)toggleVoice0:(id)sender;
 -(IBAction)toggleVoice1:(id)sender;
 -(IBAction)toggleVoice2:(id)sender;
 -(IBAction)toggleVoice3:(id)sender;
+
+-(UInt8)referenceKey;
+-(UInt8)pixelOffset;
+-(UInt8)keyOffset:(CGFloat)y;
++(UInt8)toneOffset:(UInt8)base:(UInt8)keyOffset;
+-(UInt8)chooseTone:(CGFloat)x:(CGFloat)y;
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event;
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event;

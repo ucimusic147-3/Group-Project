@@ -7,6 +7,7 @@
 //
 
 #import "AQPlayer.h"
+#import "Voice_Synth.h"
 
 #import "Singleton.h"
 
@@ -136,6 +137,16 @@ void AQBufferCallback(void *inUserData, AudioQueueRef inAQ, AudioQueueBufferRef 
         [voices[pos] on];
     }
     
+}
+
+-(Voice*)setVoiceNote:(UInt8)midi
+{
+    Voice_Synth* freevoice = (Voice_Synth*)[self getFreeVoice];
+    
+    Float64 f = [Voice_Synth noteNumToFreq:midi];
+    
+    [ freevoice setFreq:f];
+    return freevoice;
 }
 
 -(void)reportElapsedTime:(Float64)elapsed_time

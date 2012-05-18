@@ -40,6 +40,8 @@
 
 -(void)voiceToggle:(UInt16)pos;
 
+-(Voice*)setVoiceNote:(UInt8)midi;
+
 -(void)reportElapsedTime:(Float64)elapsed_time;
 
 @end
