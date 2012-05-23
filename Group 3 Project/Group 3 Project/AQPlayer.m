@@ -50,7 +50,7 @@ void AQBufferCallback(void *inUserData, AudioQueueRef inAQ, AudioQueueBufferRef 
 @implementation AQPlayer
 
 - (void)dealloc {
-
+    
 	[self stop];
 }
 
@@ -75,7 +75,7 @@ void AQBufferCallback(void *inUserData, AudioQueueRef inAQ, AudioQueueBufferRef 
 	dataFormat.mFramesPerPacket = 1;
 	dataFormat.mBytesPerPacket = sizeof(SInt16);
 	dataFormat.mBytesPerFrame = sizeof(SInt16);
-
+    
     OSStatus result = AudioQueueNewOutput(&dataFormat, AQBufferCallback, nil, nil, nil, 0, &queue);
 	
 	if (result != noErr)
@@ -92,7 +92,7 @@ void AQBufferCallback(void *inUserData, AudioQueueRef inAQ, AudioQueueBufferRef 
 -(OSStatus)start
 {
 	OSStatus result = noErr;
-
+    
     // if we have no queue, create one now
     if (queue == nil)
         [self setup];
@@ -102,14 +102,14 @@ void AQBufferCallback(void *inUserData, AudioQueueRef inAQ, AudioQueueBufferRef 
         AQBufferCallback(nil, queue, buffers[i]);            
 	
     result = AudioQueueStart(queue, nil);
-		
+    
 	return result;
 }
 
 -(OSStatus)stop
 {
 	OSStatus result = noErr;
-
+    
     result = AudioQueueStop(queue, true);
 	
 	return result;
@@ -139,19 +139,15 @@ void AQBufferCallback(void *inUserData, AudioQueueRef inAQ, AudioQueueBufferRef 
     
 }
 
--(Voice*)setVoiceNote:(UInt8)midi
+-(void)setVoiceNote:(Voice_Synth*)voice : (UInt8)midi
 {
-    Voice_Synth* freevoice = (Voice_Synth*)[self getFreeVoice];
-    
     Float64 f = [Voice_Synth noteNumToFreq:midi];
-    
-    [ freevoice setFreq:f];
-    return freevoice;
+    [voice setFreq:f];
 }
 
 -(void)reportElapsedTime:(Float64)elapsed_time
 {
-//    NSLog(@"elapsed time %f",elapsed_time);
+    //    NSLog(@"elapsed time %f",elapsed_time);
     
     [gSing updateTime:elapsed_time];
 }

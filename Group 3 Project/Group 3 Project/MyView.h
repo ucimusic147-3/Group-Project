@@ -11,7 +11,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Voice.h"
+#import "Voice_Synth.h"
 
 #define WIDTH 320.
 #define HEIGHT 460.
@@ -19,12 +19,14 @@
 #define MIDDLE_C 60
 #define OCTAVE_STEPS 12  // 12 semitones per octave
 
+extern UInt8 const NO_KEY;
+
 @interface MyView : UIView {
     UITouch* touch;
     
     UInt16 referencePixel;
-
-    Voice* freevoice;
+    
+    Voice_Synth* freevoice;
 }
 
 -(IBAction)toggleVoice0:(id)sender;

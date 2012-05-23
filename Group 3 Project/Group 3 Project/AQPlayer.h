@@ -9,19 +9,19 @@
 #import <AudioToolbox/AudioToolbox.h>
 #import <Foundation/Foundation.h>
 
-#import "Voice.h"
+#import "Voice_Synth.h"
 
 /* number of buffers used by system */
 #define kNumberBuffers	3
 
 /* number of voice */
-#define kNumberVoices   4
+#define kNumberVoices   5
 
 /* sample rate */
 #define kSR				22050.
 
 @interface AQPlayer : NSObject {
-
+    
 	AudioQueueRef				queue;
 	AudioQueueBufferRef			buffers[kNumberBuffers];
 	AudioStreamBasicDescription	dataFormat;
@@ -40,7 +40,7 @@
 
 -(void)voiceToggle:(UInt16)pos;
 
--(Voice*)setVoiceNote:(UInt8)midi;
+-(void)setVoiceNote:(Voice_Synth*)voice:(UInt8)midi;
 
 -(void)reportElapsedTime:(Float64)elapsed_time;
 
