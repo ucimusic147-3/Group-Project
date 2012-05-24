@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1C86A3D0156D926B00F0A87C /* AQRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C86A3CF156D926B00F0A87C /* AQRecorder.m */; };
 		21E32E34155D7DC6004831EB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E32E33155D7DC6004831EB /* UIKit.framework */; };
 		21E32E36155D7DC6004831EB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E32E35155D7DC6004831EB /* Foundation.framework */; };
 		21E32E38155D7DC6004831EB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E32E37155D7DC6004831EB /* CoreGraphics.framework */; };
@@ -48,8 +47,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1C86A3CE156D926B00F0A87C /* AQRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AQRecorder.h; path = ../../../Music147_2012/Music147_2012/Music147_2012/AQRecorder.h; sourceTree = "<group>"; };
-		1C86A3CF156D926B00F0A87C /* AQRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AQRecorder.m; path = ../../../Music147_2012/Music147_2012/Music147_2012/AQRecorder.m; sourceTree = "<group>"; };
 		21E32E2F155D7DC6004831EB /* Group 3 Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Group 3 Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		21E32E33155D7DC6004831EB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		21E32E35155D7DC6004831EB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -162,8 +159,6 @@
 				21E32E6E155D7E17004831EB /* AQPlayer_Synth.m */,
 				21E32E6F155D7E17004831EB /* AQPlayer.h */,
 				21E32E70155D7E17004831EB /* AQPlayer.m */,
-				1C86A3CE156D926B00F0A87C /* AQRecorder.h */,
-				1C86A3CF156D926B00F0A87C /* AQRecorder.m */,
 				21E32E71155D7E17004831EB /* MyView.h */,
 				21E32E72155D7E17004831EB /* MyView.m */,
 				21E32E73155D7E17004831EB /* Note.h */,
@@ -345,7 +340,6 @@
 				21E32E90155D7E17004831EB /* Voice_Sine.m in Sources */,
 				21E32E91155D7E17004831EB /* Voice_Synth.m in Sources */,
 				21E32E92155D7E17004831EB /* Voice.m in Sources */,
-				1C86A3D0156D926B00F0A87C /* AQRecorder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
