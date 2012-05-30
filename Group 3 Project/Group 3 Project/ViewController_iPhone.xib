@@ -38,7 +38,7 @@
 					<object class="IBUIButton" id="184008627">
 						<reference key="NSNextResponder" ref="746603565"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{124, 43}, {72, 37}}</string>
+						<string key="NSFrame">{{286, 0}, {34, 75}}</string>
 						<reference key="NSSuperview" ref="746603565"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="55149444"/>
@@ -72,7 +72,7 @@
 					<object class="IBUIButton" id="55149444">
 						<reference key="NSNextResponder" ref="746603565"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{124, 102}, {72, 37}}</string>
+						<string key="NSFrame">{{286, 130}, {34, 69}}</string>
 						<reference key="NSSuperview" ref="746603565"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="527168607"/>
@@ -93,7 +93,7 @@
 					<object class="IBUIButton" id="527168607">
 						<reference key="NSNextResponder" ref="746603565"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{124, 162}, {72, 37}}</string>
+						<string key="NSFrame">{{286, 234}, {34, 70}}</string>
 						<reference key="NSSuperview" ref="746603565"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="1020071310"/>
@@ -114,9 +114,10 @@
 					<object class="IBUIButton" id="1020071310">
 						<reference key="NSNextResponder" ref="746603565"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{124, 403}, {72, 37}}</string>
+						<string key="NSFrame">{{286, 389}, {34, 71}}</string>
 						<reference key="NSSuperview" ref="746603565"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
@@ -163,9 +164,45 @@
 						<string key="label">toggleVoice0:</string>
 						<reference key="source" ref="184008627"/>
 						<reference key="destination" ref="746603565"/>
-						<int key="IBEventType">7</int>
+						<int key="IBEventType">1</int>
 					</object>
-					<int key="connectionID">8</int>
+					<int key="connectionID">12</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">toggleVoice0:</string>
+						<reference key="source" ref="184008627"/>
+						<reference key="destination" ref="746603565"/>
+						<int key="IBEventType">5</int>
+					</object>
+					<int key="connectionID">13</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">toggleVoice0:</string>
+						<reference key="source" ref="184008627"/>
+						<reference key="destination" ref="746603565"/>
+						<int key="IBEventType">6</int>
+					</object>
+					<int key="connectionID">14</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">toggleVoice0:</string>
+						<reference key="source" ref="184008627"/>
+						<reference key="destination" ref="746603565"/>
+						<int key="IBEventType">3</int>
+					</object>
+					<int key="connectionID">15</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">toggleVoice0:</string>
+						<reference key="source" ref="184008627"/>
+						<reference key="destination" ref="746603565"/>
+						<int key="IBEventType">4</int>
+					</object>
+					<int key="connectionID">16</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
@@ -190,9 +227,45 @@
 						<string key="label">toggleVoice3:</string>
 						<reference key="source" ref="1020071310"/>
 						<reference key="destination" ref="746603565"/>
-						<int key="IBEventType">7</int>
+						<int key="IBEventType">1</int>
 					</object>
-					<int key="connectionID">11</int>
+					<int key="connectionID">17</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">toggleVoice3:</string>
+						<reference key="source" ref="1020071310"/>
+						<reference key="destination" ref="746603565"/>
+						<int key="IBEventType">5</int>
+					</object>
+					<int key="connectionID">19</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">toggleVoice3:</string>
+						<reference key="source" ref="1020071310"/>
+						<reference key="destination" ref="746603565"/>
+						<int key="IBEventType">6</int>
+					</object>
+					<int key="connectionID">20</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">toggleVoice3:</string>
+						<reference key="source" ref="1020071310"/>
+						<reference key="destination" ref="746603565"/>
+						<int key="IBEventType">3</int>
+					</object>
+					<int key="connectionID">21</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">toggleVoice3:</string>
+						<reference key="source" ref="1020071310"/>
+						<reference key="destination" ref="746603565"/>
+						<int key="IBEventType">4</int>
+					</object>
+					<int key="connectionID">22</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -218,10 +291,10 @@
 						<int key="objectID">2</int>
 						<reference key="object" ref="746603565"/>
 						<array class="NSMutableArray" key="children">
+							<reference ref="1020071310"/>
 							<reference ref="184008627"/>
 							<reference ref="55149444"/>
 							<reference ref="527168607"/>
-							<reference ref="1020071310"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -263,7 +336,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">11</int>
+			<int key="maxID">22</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
