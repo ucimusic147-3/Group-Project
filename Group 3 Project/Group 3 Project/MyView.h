@@ -13,8 +13,8 @@
 #import <UIKit/UIKit.h>
 #import "Voice_Synth.h"
 
-#define WIDTH 320.
-#define HEIGHT 460.
+#define WIDTH 300.
+#define HEIGHT 480.
 #define KEYWIDTH 60
 #define MIDDLE_C 60
 #define OCTAVE_STEPS 12  // 12 semitones per octave
