@@ -35,6 +35,7 @@
 		21E32E91155D7E17004831EB /* Voice_Synth.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E32E82155D7E17004831EB /* Voice_Synth.m */; };
 		21E32E92155D7E17004831EB /* Voice.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E32E84155D7E17004831EB /* Voice.m */; };
 		21E32E94155D7E31004831EB /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E32E93155D7E31004831EB /* AudioToolbox.framework */; };
+		8DCC348115797873009C96D1 /* Sample.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DCC348015797873009C96D1 /* Sample.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,8 @@
 		21E32E83155D7E17004831EB /* Voice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Voice.h; sourceTree = "<group>"; };
 		21E32E84155D7E17004831EB /* Voice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Voice.m; sourceTree = "<group>"; };
 		21E32E93155D7E31004831EB /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		8DCC347F15797872009C96D1 /* Sample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sample.h; sourceTree = "<group>"; };
+		8DCC348015797873009C96D1 /* Sample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sample.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +179,8 @@
 				21E32E7A155D7E17004831EB /* Singleton.m */,
 				21E32E7B155D7E17004831EB /* SoundFile.h */,
 				21E32E7C155D7E17004831EB /* SoundFile.m */,
+				8DCC347F15797872009C96D1 /* Sample.h */,
+				8DCC348015797873009C96D1 /* Sample.m */,
 				21E32E7D155D7E17004831EB /* ViewController_iPad.xib */,
 				21E32E7E155D7E17004831EB /* ViewController_iPhone.xib */,
 				21E32E7F155D7E17004831EB /* Voice_Sine.h */,
@@ -346,6 +351,7 @@
 				21E32E91155D7E17004831EB /* Voice_Synth.m in Sources */,
 				21E32E92155D7E17004831EB /* Voice.m in Sources */,
 				1CB9AD29156DBED900255B90 /* AQRecord.m in Sources */,
+				8DCC348115797873009C96D1 /* Sample.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
