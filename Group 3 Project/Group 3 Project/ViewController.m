@@ -10,6 +10,23 @@
 
 @implementation ViewController
 
+-(IBAction)loadFirstView:(id)sender
+{
+    [self clearView];
+    [self.view insertSubview:firstViewController.view atIndex:0];
+}
+
+-(IBAction)loadSecondView:(id)sender
+{
+    [self clearView];
+    [self.view insertSubview:secondViewController.view atIndex:0];
+}
+
+-(void)clearView
+{
+    if (firstViewController.view.superview) [firstViewController.view removeFromSuperview];
+    else if (secondViewController.view.superview) [secondViewController.view removeFromSuperview];
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

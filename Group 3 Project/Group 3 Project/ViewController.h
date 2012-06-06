@@ -8,6 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+#import "FirstViewController.h"
+#import "SecondViewController.h"
+
+@interface ViewController : UIViewController {
+    IBOutlet UIViewController* firstViewController;
+    IBOutlet UIViewController* secondViewController;
+    
+}
+
+-(IBAction)loadFirstView:(id)sender;
+
+-(IBAction)loadSecondView:(id)sender;
+
+-(void)clearView;
 
 @end
