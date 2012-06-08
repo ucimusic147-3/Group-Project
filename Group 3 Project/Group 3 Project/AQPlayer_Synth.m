@@ -12,16 +12,21 @@
 
 @implementation AQPlayer_Synth
 
+extern VoiceTouchPair* VTarray[NUM_VOICES]; 
+
+
 -(id)init
 {
     self = [super init];
     
-    for (SInt32 i = 0; i < 4; i++)
+    /*
+    for (UInt8 i = 0; i < NUM_VOICES; i++)
     {
-        voices[i] = [[Voice_Sine alloc] init];
- //       [voices[i] on];
-        ((Voice_Synth*)voices[i]).freq = [Voice_Synth noteNumToFreq:45+(12*i)];
-    }
+    //      Voice_Synth* newvoice = [[Voice_Sine alloc] init];
+        [VTarray[i] setVoice:newvoice];
+
+  //      newvoice.freq = [Voice_Synth noteNumToFreq:45+(12*i)];
+    }*/
     
    // [voices[2] on];
     
@@ -30,9 +35,14 @@
 
 -(void)fillAudioBuffer:(Float64*)buffer:(UInt32)num_samples
 {
-    for (SInt32 i = 0; i < 4; i++)
-        if (voices[i] != nil)
-            [voices[i] fillSampleBuffer:buffer:num_samples];
+    for (UInt8 i = 0; i < NUM_VOICES; i++)
+        if (VTarray[i] != nil)
+        {
+            Voice* voice = [VTarray[i] voice];
+            if (voice != nil)
+                 [voice fillSampleBuffer:buffer:num_samples];           
+        }
+
 }
 
 @end

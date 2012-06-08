@@ -28,7 +28,7 @@
  //   Sequence* seq = [[Sequence alloc] init];
   //  [q setSeq:seq];
     
-    [[UIAccelerometer sharedAccelerometer] setDelegate:self];
+ //   [[UIAccelerometer sharedAccelerometer] setDelegate:self];
     
     return self;
 }
@@ -42,9 +42,10 @@
     [q updateTime:elapsed_time];
 }
 
+/*
 -(void)accelerometer:(UIAccelerometer *)accelerometer didAccelerate:(UIAcceleration *)acceleration
 {
     NSLog(@"%f %f %f",acceleration.x,acceleration.y,acceleration.z);
-}
+}*/
 
 @end

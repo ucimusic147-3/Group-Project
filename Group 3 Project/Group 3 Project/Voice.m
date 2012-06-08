@@ -10,14 +10,22 @@
 
 @implementation Voice
 
-@synthesize amp;
+static UInt8 voicecount = 0;
 
--(id)init
+@synthesize note;
+
+
+-(id)initWithNote:(UInt8)n
 {
     self = [super init];
     
-    on = NO;
-    amp = 0.;
+    onCount=1;
+    voicecount++;
+ 
+    NSLog(@"%d" , voicecount);
+    
+    if (n != NO_KEY)
+        note = n;
     
     return self;
 }
@@ -26,8 +34,20 @@
 {
 }
 
--(BOOL)isOn { return on; }
--(void)on { on = YES; amp = 0.25; }
--(void)off { on = NO; amp = 0.; }
+-(BOOL)isOn { return onCount > 0; }
+-(void)on { onCount++;}
+-(void)off
+{
+    if (onCount > 0)
+    {
+        onCount--;
+    }
+    if (onCount <= 0)
+    {
+        onCount = 0;
+      
+        voicecount--;
+    }
+}
 
 @end

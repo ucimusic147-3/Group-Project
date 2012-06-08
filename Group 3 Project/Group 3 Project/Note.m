@@ -37,7 +37,7 @@ extern AQPlayer *aqp;
         /* playing */
         if (!on)
         {
-            voice = [aqp getFreeVoice];
+   //         voice = [aqp getFreeVoice];
             if (voice != nil)
             {
                 Float64 freq = [Voice_Synth noteNumToFreq:note_num];

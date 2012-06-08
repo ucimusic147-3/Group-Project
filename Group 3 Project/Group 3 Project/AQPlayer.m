@@ -14,6 +14,10 @@
 AQPlayer *aqp = nil;
 
 extern Singleton* gSing;
+extern UInt8 voicecount;
+
+
+VoiceTouchPair* VTarray[NUM_VOICES];
 
 void AQBufferCallback(void *inUserData, AudioQueueRef inAQ, AudioQueueBufferRef inAQBuffer);
 
@@ -59,6 +63,11 @@ void AQBufferCallback(void *inUserData, AudioQueueRef inAQ, AudioQueueBufferRef 
     self = [super init];
     
 	aqp = self;
+    
+    for (UInt8 i = 0; i < NUM_VOICES; i++)
+    {
+        VTarray[i] = [[VoiceTouchPair alloc] init];
+    }
 	
 	[self start];
     
@@ -120,29 +129,84 @@ void AQBufferCallback(void *inUserData, AudioQueueRef inAQ, AudioQueueBufferRef 
 	NSLog(@"AQPlayer FillAudioBuffer %ld",num_samples);
 }
 
--(Voice*)getFreeVoice
+-(VoiceTouchPair*)newTouch:(UITouch*)t
 {
-    for (UInt16 i = 0; i < kNumberVoices; i++)
-        if (![voices[i] isOn])
-            return voices[i];
+    for (UInt16 i = 0; i < NUM_VOICES; i++)
+        if ([VTarray[i] touch] == nil)
+        {
+            [VTarray[i] setTouch:t];
+            return VTarray[i];
+        }
     return nil;
 }
 
--(void)voiceToggle:(UInt16)pos
+-(VoiceTouchPair*)findTouch:(UITouch*)t
 {
-    if ([voices[pos] isOn]) {
-        [voices[pos] off];
-    }
-    else {
-        [voices[pos] on];
-    }
-    
+    for (UInt16 i = 0; i < NUM_VOICES; i++)
+        
+        if ([VTarray[i] touch] == t)
+        {
+            return VTarray[i];
+        }
+    return nil;
 }
 
--(void)setVoiceNote:(Voice_Synth*)voice : (UInt8)midi
++(Voice*)findVoice:(UInt8)midi
 {
-    Float64 f = [Voice_Synth noteNumToFreq:midi];
-    [voice setFreq:f];
+    for (int i=0; i<NUM_VOICES; i++ )
+    {
+        VoiceTouchPair* vt = VTarray[i];
+        if (vt != nil && [vt voice] != nil && [[vt voice] note] == midi)
+        {
+            return [vt voice];
+        }
+    }
+    return nil;
+}
+
+-(void)setNote:(VoiceTouchPair*)vt : (UInt8)midi
+{
+    Voice* myvoice = [vt voice];
+    if (myvoice != nil)
+    {
+        [myvoice off];
+    }
+    
+    if (midi == NO_KEY)
+    {
+        [vt setVoice:nil];
+        return;
+    }
+    
+    Voice* result = [AQPlayer findVoice:midi];
+
+    if (result == nil) 
+    {
+        Voice* newvoice = [[Voice_Sine alloc] initWithNote:midi];
+        [vt setVoice:newvoice];
+        
+    }
+    else
+    {
+        [vt setVoice:result];
+        [result on];
+    }
+}
+
+-(void)killTouch:(UITouch*)t
+{
+    for (UInt16 i = 0; i < NUM_VOICES; i++)
+    {
+        if ([VTarray[i] touch] == t)
+        {
+            [VTarray[i] setTouch:nil];
+            
+            Voice* v = [VTarray[i] voice];
+            if (v != nil)
+                [v off];
+            [VTarray[i] setVoice:nil];
+        }
+    }
 }
 
 -(void)reportElapsedTime:(Float64)elapsed_time

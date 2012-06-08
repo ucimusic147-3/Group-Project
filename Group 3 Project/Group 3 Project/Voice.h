@@ -7,16 +7,21 @@
 //
 
 #import <Foundation/Foundation.h>
+/* number of voice */
+#define NUM_VOICES   10
+
+extern UInt8 const NO_KEY;
 
 @interface Voice : NSObject {
-    BOOL on;
-    Float64 amp;
+    UInt8 onCount;
+
 }
 
-@property Float64 amp;
+@property UInt8 note;
+
 
 -(void)fillSampleBuffer:(Float64*)buffer:(UInt32)num_samples;
-
+-(id)initWithNote:(UInt8)n;
 -(BOOL)isOn;
 -(void)on;
 -(void)off;

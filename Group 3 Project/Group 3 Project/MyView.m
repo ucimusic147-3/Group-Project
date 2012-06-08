@@ -13,18 +13,32 @@
 #import "Singleton.h"
 
 extern AQPlayer *aqp;
+extern VoiceTouchPair* VTarray[NUM_VOICES];
 
 @implementation MyView
 
 UInt8 const NO_KEY = 255;
 
+/*
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
-        // Initialization code
+        [[UIAccelerometer sharedAccelerometer] setDelegate:self];
+        NSLog(@"hello myview");
     }
     return self;
+}
+*/
+
+-(void)awakeFromNib
+{
+    [[UIAccelerometer sharedAccelerometer] setDelegate:self];
+}
+
+-(void)accelerometer:(UIAccelerometer *)accelerometer didAccelerate:(UIAcceleration *)acceleration
+{
+ //      NSLog(@"accelerometer!  %f %f %f",acceleration.x,acceleration.y,acceleration.z);
 }
 
 /*
@@ -42,6 +56,7 @@ UInt8 const NO_KEY = 255;
     //   [aqp voiceToggle:0];
     referencePixel -= 15;
     [self setNeedsDisplay];
+    
 }
 
 
@@ -71,79 +86,43 @@ UInt8 const NO_KEY = 255;
     
     for (UITouch* t in touches)
     {
-        CGPoint pt = [t locationInView:self];
-        if ( 0 <= pt.y && pt.y <= WIDTH )
+        VoiceTouchPair* vtPair = [aqp newTouch:t];
+        if (vtPair != nil)
         {
+            CGPoint pt = [t locationInView:self];
             UInt8 note = [self chooseTone:pt.x:pt.y];
-            if ( note != NO_KEY )
-            {
-                touch = t;
-                if (freevoice == nil)
-                {
-                    freevoice = (Voice_Synth*)[aqp getFreeVoice];
-                }
-                [aqp setVoiceNote:freevoice:note];
-                [freevoice on];
-            }
-            //        NSLog(@"%d , %d", note , referencePixel);
-        }             
-        
-        
+            [aqp setNote:vtPair:note];
+        }
+//        NSLog(@"Began (%f , %f)", pt.x , pt.y);
     }
-    
-    
     [self setNeedsDisplay];
-    //   NSLog(@"%lf",event.timestamp);
-    
-    
 }
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
     for (UITouch* t in touches)
     {
-        CGPoint pt = [t locationInView:self];
-        if ( 0 <= pt.y && pt.y <= WIDTH )
+        for (UITouch* t in touches)
         {
-            UInt8 note = [self chooseTone:pt.x:pt.y];
-            if ( note != NO_KEY )
+            VoiceTouchPair* vtPair = [aqp findTouch:t];
+            if (vtPair != nil)
             {
-                touch = t;
-                if (freevoice == nil)
-                {
-                    freevoice = (Voice_Synth*)[aqp getFreeVoice];
-                }
-                [aqp setVoiceNote:freevoice:note];
-                [freevoice on];
+                CGPoint pt = [t locationInView:self];
+                UInt8 note = [self chooseTone:pt.x:pt.y];
+                [aqp setNote:vtPair:note];
             }
-            else
-            {
-                [freevoice off];
-                freevoice = nil;
-                touch = nil;
-                
-            }
+            //        NSLog(@"Began (%f , %f)", pt.x , pt.y);
         }
+        [self setNeedsDisplay];
     }
-    [self setNeedsDisplay];
-    //   NSLog(@"%lf",event.timestamp);
-    
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    /*
-     NSLog(@"%d",touches.count);
      for (UITouch* t in touches)
      {
-     CGPoint pt = [t locationInView:self];
-     NSLog(@"%lf,%lf",pt.x,pt.y);
+         [aqp killTouch:t];
      }
-     NSLog(@"%lf",event.timestamp);
-     */
-    [freevoice off];
-    freevoice = nil;
-    touch = nil;
     [self setNeedsDisplay];
 }
 
@@ -157,7 +136,7 @@ UInt8 const NO_KEY = 255;
     UInt8 octave = referencePixel/octaveWidth;
     UInt16 cKeyOffset = (referencePixel % octaveWidth) / KEYWIDTH;  // how many steps above c?
     UInt8 cToneOffset = [MyView toneOffset:0:cKeyOffset];
-    NSLog(@"octave %d cKeyoffset %d ctoneoffset %d" , octave , cKeyOffset , cToneOffset);
+ //   NSLog(@"octave %d cKeyoffset %d ctoneoffset %d" , octave , cKeyOffset , cToneOffset);
     return OCTAVE_STEPS*octave + cToneOffset;       // octaves begin on c
 }
 
@@ -226,7 +205,6 @@ UInt8 const NO_KEY = 255;
         {
             return NO_KEY;
         }
-        NSLog(@"black key!");
         UInt8 chosenTone = tone + [MyView toneOffset:tone:keyoffset]-1;
         switch (chosenTone % 12) {
             case 11: case 4:
@@ -234,7 +212,8 @@ UInt8 const NO_KEY = 255;
         }
         return chosenTone;
     }
-}   // Ignore warning
+    return NO_KEY;
+}
 
 // 320 X 460
 -(void) drawRect:(CGRect)rect
@@ -257,6 +236,9 @@ UInt8 const NO_KEY = 255;
     }
     
     // Highlight touched white key
+    for (int i = 0 ; i < NUM_VOICES ; i++ )
+    {
+    UITouch* touch = [VTarray[i] touch];
     if (touch != nil)
     {
         [[UIColor darkGrayColor] set];
@@ -266,6 +248,7 @@ UInt8 const NO_KEY = 255;
         {
             UIRectFill(CGRectMake([self keyOffset:pt.x]*KEYWIDTH-offset+thickness , 0 ,KEYWIDTH-thickness , WIDTH));
         }
+    }
     }
     
     
@@ -294,7 +277,10 @@ UInt8 const NO_KEY = 255;
     }
     
     // Highlight touched black key
-    if (touch != nil)
+    for (int i = 0 ; i < NUM_VOICES ; i++ )
+    {
+    UITouch* touch = [VTarray[i] touch];
+    if (touch != nil && [VTarray[i] voice] != nil)
     {
         [[UIColor lightGrayColor] set];
         CGPoint pt = [touch locationInView:self];
@@ -304,6 +290,7 @@ UInt8 const NO_KEY = 255;
             UInt8 keyoffset = [self keyOffset:pt.x+KEYWIDTH/2];
             UIRectFill(CGRectMake(keyoffset*KEYWIDTH-offset-KEYWIDTH/4,0,KEYWIDTH/2,2*WIDTH/3));
         }
+    }
     }
      
 }

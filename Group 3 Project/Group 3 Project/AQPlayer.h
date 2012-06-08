@@ -9,13 +9,13 @@
 #import <AudioToolbox/AudioToolbox.h>
 #import <Foundation/Foundation.h>
 
-#import "Voice_Synth.h"
+#import "Voice_Sine.h"
+#import "VoiceTouchPair.h"
 
 /* number of buffers used by system */
 #define kNumberBuffers	3
 
-/* number of voice */
-#define kNumberVoices   5
+
 
 /* sample rate */
 #define kSR				22050.
@@ -26,8 +26,10 @@
 	AudioQueueBufferRef			buffers[kNumberBuffers];
 	AudioStreamBasicDescription	dataFormat;
     
-    Voice* voices[kNumberVoices];
+    //Voice* voices[NUM_VOICES];
+    
 }
+
 
 -(void)setup;
 
@@ -36,11 +38,16 @@
 
 -(void)fillAudioBuffer:(Float64*)buffer:(UInt32)num_samples;
 
--(Voice*)getFreeVoice;
+-(VoiceTouchPair*)newTouch:(UITouch*)newtouch;
 
--(void)voiceToggle:(UInt16)pos;
++(Voice*)findVoice:(UInt8)midi;
+-(VoiceTouchPair*)findTouch:(UITouch*)searchkey;
 
--(void)setVoiceNote:(Voice_Synth*)voice:(UInt8)midi;
+-(void)killTouch:(UITouch*)touch;
+
+//-(void)voiceToggle:(UInt16)pos;
+
+-(void)setNote:(VoiceTouchPair*)vt:(UInt8)midi;
 
 -(void)reportElapsedTime:(Float64)elapsed_time;
 

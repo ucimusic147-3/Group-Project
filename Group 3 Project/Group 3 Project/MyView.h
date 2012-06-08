@@ -19,14 +19,15 @@
 #define MIDDLE_C 60
 #define OCTAVE_STEPS 12  // 12 semitones per octave
 
-extern UInt8 const NO_KEY;
 
-@interface MyView : UIView {
-    UITouch* touch;
+
+
+@interface MyView : UIView <UIAccelerometerDelegate> {
+//    UITouch* touch[NUM_VOICES];
     
     UInt16 referencePixel;
     
-    Voice_Synth* freevoice;
+//    Voice_Synth* freevoice;
 }
 
 -(IBAction)toggleVoice0:(id)sender;
