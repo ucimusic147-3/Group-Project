@@ -36,7 +36,7 @@
 		21E32E92155D7E17004831EB /* Voice.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E32E84155D7E17004831EB /* Voice.m */; };
 		21E32E94155D7E31004831EB /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E32E93155D7E31004831EB /* AudioToolbox.framework */; };
 		8DCC348115797873009C96D1 /* Sample.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DCC348015797873009C96D1 /* Sample.m */; };
-		93DEF3AF15819ACC00AB7B73 /* VoiceTouchPair.m in Sources */ = {isa = PBXBuildFile; fileRef = 93DEF3AE15819ACC00AB7B73 /* VoiceTouchPair.m */; };
+		93BB3C1B15867ED200070867 /* VoiceTouchPair.m in Sources */ = {isa = PBXBuildFile; fileRef = 93BB3C1A15867ED200070867 /* VoiceTouchPair.m */; };
 		BC858487157EDDAB00706519 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC858485157EDDAB00706519 /* FirstViewController.m */; };
 		BC858488157EDDAB00706519 /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC858486157EDDAB00706519 /* FirstViewController.xib */; };
 		BC85848D157EDDC900706519 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC85848B157EDDC900706519 /* SecondViewController.m */; };
@@ -103,8 +103,8 @@
 		21E32E93155D7E31004831EB /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		8DCC347F15797872009C96D1 /* Sample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sample.h; sourceTree = "<group>"; };
 		8DCC348015797873009C96D1 /* Sample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sample.m; sourceTree = "<group>"; };
-		93DEF3AD15819ACC00AB7B73 /* VoiceTouchPair.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoiceTouchPair.h; sourceTree = "<group>"; };
-		93DEF3AE15819ACC00AB7B73 /* VoiceTouchPair.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoiceTouchPair.m; sourceTree = "<group>"; };
+		93BB3C1915867ED200070867 /* VoiceTouchPair.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoiceTouchPair.h; sourceTree = "<group>"; };
+		93BB3C1A15867ED200070867 /* VoiceTouchPair.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoiceTouchPair.m; sourceTree = "<group>"; };
 		BC858484157EDDAB00706519 /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		BC858485157EDDAB00706519 /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		BC858486157EDDAB00706519 /* FirstViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstViewController.xib; sourceTree = "<group>"; };
@@ -180,6 +180,8 @@
 				21E32E6E155D7E17004831EB /* AQPlayer_Synth.m */,
 				21E32E6F155D7E17004831EB /* AQPlayer.h */,
 				21E32E70155D7E17004831EB /* AQPlayer.m */,
+				93BB3C1915867ED200070867 /* VoiceTouchPair.h */,
+				93BB3C1A15867ED200070867 /* VoiceTouchPair.m */,
 				21E32E71155D7E17004831EB /* MyView.h */,
 				21E32E72155D7E17004831EB /* MyView.m */,
 				21E32E73155D7E17004831EB /* Note.h */,
@@ -208,8 +210,6 @@
 				21E32E82155D7E17004831EB /* Voice_Synth.m */,
 				21E32E83155D7E17004831EB /* Voice.h */,
 				21E32E84155D7E17004831EB /* Voice.m */,
-				93DEF3AD15819ACC00AB7B73 /* VoiceTouchPair.h */,
-				93DEF3AE15819ACC00AB7B73 /* VoiceTouchPair.m */,
 				21E32E42155D7DC6004831EB /* AppDelegate.h */,
 				21E32E43155D7DC7004831EB /* AppDelegate.m */,
 				21E32E45155D7DC7004831EB /* ViewController.h */,
@@ -377,7 +377,7 @@
 				8DCC348115797873009C96D1 /* Sample.m in Sources */,
 				BC858487157EDDAB00706519 /* FirstViewController.m in Sources */,
 				BC85848D157EDDC900706519 /* SecondViewController.m in Sources */,
-				93DEF3AF15819ACC00AB7B73 /* VoiceTouchPair.m in Sources */,
+				93BB3C1B15867ED200070867 /* VoiceTouchPair.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
