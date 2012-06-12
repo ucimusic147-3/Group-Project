@@ -37,7 +37,7 @@
 }
 
 
--(void)fillSampleBuffer:(Float64*)buffer:(UInt32)num_buf_samples
+-(void)fillSampleBuffer:(Float64*)buffer:(UInt32)num_buf_samples:(Float64)freq
 {
     /* set up arguments needed by AudioFileReadPackets */
 	UInt32 ioNumPackets = num_buf_samples;

@@ -22,10 +22,12 @@ static UInt8 voicecount = 0;
     onCount=1;
     voicecount++;
  
-    NSLog(@"%d" , voicecount);
+   // NSLog(@"%d" , voicecount);
     
     if (n != NO_KEY)
         note = n;
+    
+    NSLog(@"%d voices" , [Voice getCount]);
     
     return self;
 }
@@ -35,19 +37,28 @@ static UInt8 voicecount = 0;
 }
 
 -(BOOL)isOn { return onCount > 0; }
--(void)on { onCount++;}
+-(void)on 
+{
+    if (onCount == 0)
+        voicecount++;
+    onCount++;
+}
+
 -(void)off
 {
     if (onCount > 0)
     {
         onCount--;
     }
-    if (onCount <= 0)
+    if (onCount == 0)
     {
-        onCount = 0;
-      
         voicecount--;
     }
+}
+
++(UInt8)getCount
+{
+    return voicecount;
 }
 
 @end

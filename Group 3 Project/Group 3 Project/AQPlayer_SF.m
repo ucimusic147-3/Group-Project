@@ -21,7 +21,12 @@
 
 -(void)fillAudioBuffer:(Float64*)buffer:(UInt32)num_samples
 {
-    [sf fillSampleBuffer:buffer:num_samples];
+ //   [sf fillSampleBuffer:buffer:num_samples];
+}
+
+-(Voice*)makeVoice:(UInt8)midi
+{
+    return [[Voice_Sine alloc] initWithNote:midi];
 }
 
 @end

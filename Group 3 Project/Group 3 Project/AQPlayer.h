@@ -32,23 +32,13 @@
 
 
 -(void)setup;
-
 -(OSStatus)start;
 -(OSStatus)stop;
-
 -(void)fillAudioBuffer:(Float64*)buffer:(UInt32)num_samples;
-
--(VoiceTouchPair*)newTouch:(UITouch*)newtouch;
-
-+(Voice*)findVoice:(UInt8)midi;
--(VoiceTouchPair*)findTouch:(UITouch*)searchkey;
-
--(void)killTouch:(UITouch*)touch;
-
-//-(void)voiceToggle:(UInt16)pos;
-
--(void)setNote:(VoiceTouchPair*)vt:(UInt8)midi;
-
 -(void)reportElapsedTime:(Float64)elapsed_time;
+
+
+
+
 
 @end

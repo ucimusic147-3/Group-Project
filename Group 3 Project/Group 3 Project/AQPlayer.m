@@ -7,17 +7,16 @@
 //
 
 #import "AQPlayer.h"
-#import "Voice_Synth.h"
-
+//#import "Voice_SF.h"
+//#import "SoundFile.h"
 #import "Singleton.h"
 
 AQPlayer *aqp = nil;
 
 extern Singleton* gSing;
 extern UInt8 voicecount;
+extern VoiceTouchPair* VTarray[NUM_VOICES];
 
-
-VoiceTouchPair* VTarray[NUM_VOICES];
 
 void AQBufferCallback(void *inUserData, AudioQueueRef inAQ, AudioQueueBufferRef inAQBuffer);
 
@@ -124,90 +123,31 @@ void AQBufferCallback(void *inUserData, AudioQueueRef inAQ, AudioQueueBufferRef 
 	return result;
 }
 
+
 -(void)fillAudioBuffer:(Float64*)buffer:(UInt32)num_samples
 {
-	NSLog(@"AQPlayer FillAudioBuffer %ld",num_samples);
-}
-
--(VoiceTouchPair*)newTouch:(UITouch*)t
-{
-    for (UInt16 i = 0; i < NUM_VOICES; i++)
-        if ([VTarray[i] touch] == nil)
+    for (UInt8 i = 0; i < NUM_VOICES; i++)
+        if (VTarray[i] != nil)
         {
-            [VTarray[i] setTouch:t];
-            return VTarray[i];
+            Voice* current = [VTarray[i] voice];
+            if ((current != nil) && [current isOn])
+            {
+                BOOL distinct = YES;
+                for (UInt8 j = 0; j < i; j++)
+                {
+                    if (current == [VTarray[j] voice])
+                    {
+                        distinct = NO;
+                        break;
+                    }
+                }
+                if (distinct)
+                    [current fillSampleBuffer:buffer:num_samples];           
+            }   
         }
-    return nil;
-}
-
--(VoiceTouchPair*)findTouch:(UITouch*)t
-{
-    for (UInt16 i = 0; i < NUM_VOICES; i++)
-        
-        if ([VTarray[i] touch] == t)
-        {
-            return VTarray[i];
-        }
-    return nil;
-}
-
-+(Voice*)findVoice:(UInt8)midi
-{
-    for (int i=0; i<NUM_VOICES; i++ )
-    {
-        VoiceTouchPair* vt = VTarray[i];
-        if (vt != nil && [vt voice] != nil && [[vt voice] note] == midi)
-        {
-            return [vt voice];
-        }
-    }
-    return nil;
-}
-
--(void)setNote:(VoiceTouchPair*)vt : (UInt8)midi
-{
-    Voice* myvoice = [vt voice];
-    if (myvoice != nil)
-    {
-        [myvoice off];
-    }
     
-    if (midi == NO_KEY)
-    {
-        [vt setVoice:nil];
-        return;
-    }
-    
-    Voice* result = [AQPlayer findVoice:midi];
-
-    if (result == nil) 
-    {
-        Voice* newvoice = [[Voice_Sine alloc] initWithNote:midi];
-        [vt setVoice:newvoice];
-        
-    }
-    else
-    {
-        [vt setVoice:result];
-        [result on];
-    }
 }
 
--(void)killTouch:(UITouch*)t
-{
-    for (UInt16 i = 0; i < NUM_VOICES; i++)
-    {
-        if ([VTarray[i] touch] == t)
-        {
-            [VTarray[i] setTouch:nil];
-            
-            Voice* v = [VTarray[i] voice];
-            if (v != nil)
-                [v off];
-            [VTarray[i] setVoice:nil];
-        }
-    }
-}
 
 -(void)reportElapsedTime:(Float64)elapsed_time
 {

@@ -11,7 +11,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Voice_Synth.h"
 
 #define WIDTH 300.
 #define HEIGHT 480.
@@ -28,12 +27,14 @@
     UInt16 referencePixel;
     
 //    Voice_Synth* freevoice;
+    BOOL accelerometerOn;
 }
 
--(IBAction)toggleVoice0:(id)sender;
--(IBAction)toggleVoice1:(id)sender;
--(IBAction)toggleVoice2:(id)sender;
--(IBAction)toggleVoice3:(id)sender;
+-(IBAction)button1:(id)sender;
+-(IBAction)button2:(id)sender;
+-(IBAction)button3:(id)sender;
+-(IBAction)button4:(id)sender;
+-(IBAction)button5:(id)sender;
 
 -(UInt8)referenceKey;
 -(UInt8)pixelOffset;

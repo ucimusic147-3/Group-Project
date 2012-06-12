@@ -11,13 +11,18 @@
 #import "AQPlayer.h"
 
 #import "Singleton.h"
+#import "VoiceTouchPair.h"
 
 extern AQPlayer *aqp;
 extern VoiceTouchPair* VTarray[NUM_VOICES];
+extern enum OutputMode currentMode;
+
+
+UInt8 const NO_KEY = 255;
+
 
 @implementation MyView
 
-UInt8 const NO_KEY = 255;
 
 /*
 - (id)initWithFrame:(CGRect)frame
@@ -34,23 +39,22 @@ UInt8 const NO_KEY = 255;
 -(void)awakeFromNib
 {
     [[UIAccelerometer sharedAccelerometer] setDelegate:self];
+    accelerometerOn = NO;
+    referencePixel = 7*KEYWIDTH*5;
 }
 
 -(void)accelerometer:(UIAccelerometer *)accelerometer didAccelerate:(UIAcceleration *)acceleration
 {
- //      NSLog(@"accelerometer!  %f %f %f",acceleration.x,acceleration.y,acceleration.z);
+    if ( accelerometerOn )
+    {
+       NSLog(@"accelerometer!  %f %f %f",acceleration.x,acceleration.y,acceleration.z);
+        
+    }
 }
 
-/*
- // Only override drawRect: if you perform custom drawing.
- // An empty implementation adversely affects performance during animation.
- - (void)drawRect:(CGRect)rect
- {
- // Drawing code
- }
- */
 
--(IBAction)toggleVoice0:(id)sender
+
+-(IBAction)button1:(id)sender
 {
     //   NSLog(@"toggleVoice0");
     //   [aqp voiceToggle:0];
@@ -60,20 +64,26 @@ UInt8 const NO_KEY = 255;
 }
 
 
--(IBAction)toggleVoice1:(id)sender
+-(IBAction)button2:(id)sender
 {
-    //   NSLog(@"toggleVoice1");
-    
-    referencePixel = 7*KEYWIDTH*5;
-    [self setNeedsDisplay];
+    [VoiceTouchPair setMode:Sine];
 }
 
--(IBAction)toggleVoice2:(id)sender
+-(IBAction)button3:(id)sender
+{
+    [VoiceTouchPair setMode:File];
+}
+
+-(IBAction)button4:(id)sender
 {
     //   NSLog(@"toggleVoice2");
+    if (accelerometerOn)
+        accelerometerOn = NO;
+    else 
+        accelerometerOn = YES;
 }
 
--(IBAction)toggleVoice3:(id)sender
+-(IBAction)button5:(id)sender
 {
     //   NSLog(@"toggleVoice3");
     referencePixel+=15;
@@ -86,12 +96,12 @@ UInt8 const NO_KEY = 255;
     
     for (UITouch* t in touches)
     {
-        VoiceTouchPair* vtPair = [aqp newTouch:t];
+        VoiceTouchPair* vtPair = [VoiceTouchPair newTouch:t];
         if (vtPair != nil)
         {
             CGPoint pt = [t locationInView:self];
             UInt8 note = [self chooseTone:pt.x:pt.y];
-            [aqp setNote:vtPair:note];
+            [VoiceTouchPair setNote:vtPair:note];
         }
 //        NSLog(@"Began (%f , %f)", pt.x , pt.y);
     }
@@ -104,12 +114,12 @@ UInt8 const NO_KEY = 255;
     {
         for (UITouch* t in touches)
         {
-            VoiceTouchPair* vtPair = [aqp findTouch:t];
+            VoiceTouchPair* vtPair = [VoiceTouchPair findTouch:t];
             if (vtPair != nil)
             {
                 CGPoint pt = [t locationInView:self];
                 UInt8 note = [self chooseTone:pt.x:pt.y];
-                [aqp setNote:vtPair:note];
+                [VoiceTouchPair setNote:vtPair:note];
             }
             //        NSLog(@"Began (%f , %f)", pt.x , pt.y);
         }
@@ -121,13 +131,18 @@ UInt8 const NO_KEY = 255;
 {
      for (UITouch* t in touches)
      {
-         [aqp killTouch:t];
+         [VoiceTouchPair killTouch:t];
      }
     [self setNeedsDisplay];
 }
 
 - (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
 {
+    for (UITouch* t in touches)
+    {
+        [VoiceTouchPair killTouch:t];
+    }
+    [self setNeedsDisplay];
 }
 
 -(UInt8)referenceKey

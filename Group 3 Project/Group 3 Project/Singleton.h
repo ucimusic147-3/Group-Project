@@ -16,9 +16,8 @@
     
     AQPlayer*   aqp;
     
-    Sequencer*  q;
+    //Sequencer*  q;
     
-    UInt16 noteNum;
 }
 
 -(void)updateTime:(Float64)elapsed_time;

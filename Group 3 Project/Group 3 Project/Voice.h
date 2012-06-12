@@ -26,4 +26,6 @@ extern UInt8 const NO_KEY;
 -(void)on;
 -(void)off;
 
++(UInt8)getCount;
+
 @end

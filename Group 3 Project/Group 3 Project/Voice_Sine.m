@@ -18,7 +18,7 @@ extern UInt8 voicecount;
 {
     deltaTheta = freq / kSR;
     
-    Float64 amp = .25; //(Float64)voicecount/NUM_VOICES;
+    Float64 amp = (Float64)1.0/(1+[Voice getCount]);
     
 	for (SInt32 i = 0; i < num_samples; i++)
 	{

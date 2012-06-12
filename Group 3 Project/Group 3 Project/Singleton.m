@@ -7,9 +7,7 @@
 //
 
 #import "Singleton.h"
-
-#import "AQPlayer_SF.h"
-#import "AQPlayer_Synth.h"
+#import "AQPlayer.h"
 
 @implementation Singleton
 
@@ -19,16 +17,8 @@
     
     NSLog(@"Initializing Singleton object.");
     
-    aqp = [[AQPlayer_Synth alloc] init];
+    aqp = [[AQPlayer alloc] init];
     
- //   q = [[Sequencer alloc] init];
- //   [q setBpm:133];
-    
-    /* this is temporary just to test the new sequencer code */
- //   Sequence* seq = [[Sequence alloc] init];
-  //  [q setSeq:seq];
-    
- //   [[UIAccelerometer sharedAccelerometer] setDelegate:self];
     
     return self;
 }
@@ -39,7 +29,7 @@
 
 -(void)updateTime:(Float64)elapsed_time
 {
-    [q updateTime:elapsed_time];
+  //  [q updateTime:elapsed_time];
 }
 
 /*

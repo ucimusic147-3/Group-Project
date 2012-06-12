@@ -37,6 +37,7 @@
 		21E32E94155D7E31004831EB /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E32E93155D7E31004831EB /* AudioToolbox.framework */; };
 		8DCC348115797873009C96D1 /* Sample.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DCC348015797873009C96D1 /* Sample.m */; };
 		93BB3C1B15867ED200070867 /* VoiceTouchPair.m in Sources */ = {isa = PBXBuildFile; fileRef = 93BB3C1A15867ED200070867 /* VoiceTouchPair.m */; };
+		93C7A8AA1586D5CB00A3EB3A /* Voice_SF.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C7A8A91586D5CB00A3EB3A /* Voice_SF.m */; };
 		BC858487157EDDAB00706519 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC858485157EDDAB00706519 /* FirstViewController.m */; };
 		BC858488157EDDAB00706519 /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC858486157EDDAB00706519 /* FirstViewController.xib */; };
 		BC85848D157EDDC900706519 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC85848B157EDDC900706519 /* SecondViewController.m */; };
@@ -105,6 +106,8 @@
 		8DCC348015797873009C96D1 /* Sample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sample.m; sourceTree = "<group>"; };
 		93BB3C1915867ED200070867 /* VoiceTouchPair.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoiceTouchPair.h; sourceTree = "<group>"; };
 		93BB3C1A15867ED200070867 /* VoiceTouchPair.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoiceTouchPair.m; sourceTree = "<group>"; };
+		93C7A8A81586D5CB00A3EB3A /* Voice_SF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Voice_SF.h; sourceTree = "<group>"; };
+		93C7A8A91586D5CB00A3EB3A /* Voice_SF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Voice_SF.m; sourceTree = "<group>"; };
 		BC858484157EDDAB00706519 /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		BC858485157EDDAB00706519 /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		BC858486157EDDAB00706519 /* FirstViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstViewController.xib; sourceTree = "<group>"; };
@@ -176,6 +179,8 @@
 				1CB9AD28156DBED900255B90 /* AQRecord.m */,
 				21E32E6B155D7E17004831EB /* AQPlayer_SF.h */,
 				21E32E6C155D7E17004831EB /* AQPlayer_SF.m */,
+				93C7A8A81586D5CB00A3EB3A /* Voice_SF.h */,
+				93C7A8A91586D5CB00A3EB3A /* Voice_SF.m */,
 				21E32E6D155D7E17004831EB /* AQPlayer_Synth.h */,
 				21E32E6E155D7E17004831EB /* AQPlayer_Synth.m */,
 				21E32E6F155D7E17004831EB /* AQPlayer.h */,
@@ -378,6 +383,7 @@
 				BC858487157EDDAB00706519 /* FirstViewController.m in Sources */,
 				BC85848D157EDDC900706519 /* SecondViewController.m in Sources */,
 				93BB3C1B15867ED200070867 /* VoiceTouchPair.m in Sources */,
+				93C7A8AA1586D5CB00A3EB3A /* Voice_SF.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

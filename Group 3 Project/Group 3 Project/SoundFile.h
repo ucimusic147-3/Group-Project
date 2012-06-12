@@ -25,6 +25,6 @@
 }
 
 /* calling this will read the next buffer of samples */
--(void)fillSampleBuffer:(Float64*)buffer:(UInt32)num_buf_samples;
+-(void)fillSampleBuffer:(Float64*)buffer:(UInt32)num_buf_samples:(Float64)freq;
 
 @end

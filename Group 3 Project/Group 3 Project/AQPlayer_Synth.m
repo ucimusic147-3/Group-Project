@@ -38,9 +38,21 @@ extern VoiceTouchPair* VTarray[NUM_VOICES];
     for (UInt8 i = 0; i < NUM_VOICES; i++)
         if (VTarray[i] != nil)
         {
-            Voice* voice = [VTarray[i] voice];
-            if (voice != nil)
-                 [voice fillSampleBuffer:buffer:num_samples];           
+            Voice* current = [VTarray[i] voice];
+            if ((current != nil) && [current isOn])
+            {
+                BOOL distinct = YES;
+                for (UInt8 j = 0; j <= i; j++)
+                {
+                    if (current == [VTarray[j] voice])
+                    {
+                        distinct = NO;
+                        break;
+                    }
+                }
+                if (distinct)
+                    [current fillSampleBuffer:buffer:num_samples];           
+            }   
         }
 
 }
