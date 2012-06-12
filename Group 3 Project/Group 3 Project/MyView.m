@@ -41,6 +41,7 @@ UInt8 const NO_KEY = 255;
     [[UIAccelerometer sharedAccelerometer] setDelegate:self];
     accelerometerOn = NO;
     referencePixel = 7*KEYWIDTH*5;
+    
 }
 
 -(void)accelerometer:(UIAccelerometer *)accelerometer didAccelerate:(UIAcceleration *)acceleration
@@ -52,6 +53,11 @@ UInt8 const NO_KEY = 255;
     }
 }
 
+-(IBAction)doSlider:(id)sender{
+    
+    referencePixel = Slider.value;
+    [self setNeedsDisplay];
+}
 
 
 -(IBAction)button1:(id)sender

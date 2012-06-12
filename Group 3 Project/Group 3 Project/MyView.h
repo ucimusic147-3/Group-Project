@@ -28,8 +28,11 @@
     
 //    Voice_Synth* freevoice;
     BOOL accelerometerOn;
+    
+    IBOutlet UISlider* Slider;
 }
 
+-(IBAction)doSlider:(id)sender;
 -(IBAction)button1:(id)sender;
 -(IBAction)button2:(id)sender;
 -(IBAction)button3:(id)sender;
