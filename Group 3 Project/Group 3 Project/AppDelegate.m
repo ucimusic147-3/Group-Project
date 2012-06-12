@@ -30,6 +30,8 @@ Singleton* gSing = nil;
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
 
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackOpaque];
+    
     gSing = [[Singleton alloc] init];
 
     return YES;

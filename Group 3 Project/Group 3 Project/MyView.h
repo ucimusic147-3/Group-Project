@@ -30,6 +30,7 @@
     BOOL accelerometerOn;
     
     IBOutlet UISlider* Slider;
+   IBOutlet UIButton *button4;
 }
 
 -(IBAction)doSlider:(id)sender;

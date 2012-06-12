@@ -41,7 +41,7 @@ UInt8 const NO_KEY = 255;
     [[UIAccelerometer sharedAccelerometer] setDelegate:self];
     accelerometerOn = NO;
     referencePixel = 7*KEYWIDTH*5;
-    
+
 }
 
 -(void)accelerometer:(UIAccelerometer *)accelerometer didAccelerate:(UIAcceleration *)acceleration
@@ -49,8 +49,25 @@ UInt8 const NO_KEY = 255;
     if ( accelerometerOn )
     {
        NSLog(@"accelerometer!  %f %f %f",acceleration.x,acceleration.y,acceleration.z);
+        if (fabs(acceleration.y) > .1) {
+            
         
-    }
+        Slider.value -= 100*acceleration.y;
+        referencePixel = Slider.value;
+        for (UInt8 i = 0 ; i < NUM_VOICES ; i++)
+        {
+            VoiceTouchPair* vt = VTarray[i];
+            if (vt != nil && [vt touch] != nil)
+            {
+                UITouch* t = [vt touch];
+                CGPoint pt = [t locationInView:self];
+                UInt8 note = [self chooseTone:pt.x:pt.y];
+                [VoiceTouchPair setNote:vt:note];
+            }
+            //        NSLog(@"Began (%f , %f)", pt.x , pt.y);
+        }
+        [self setNeedsDisplay];
+        }}
 }
 
 -(IBAction)doSlider:(id)sender{
