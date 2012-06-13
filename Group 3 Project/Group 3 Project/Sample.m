@@ -10,6 +10,10 @@
 
 @implementation Sample
 
+-(void)resetStartPos
+{
+}
+
 -(void)fillSampleBuffer:(Float64*)buffer:(UInt32)num_buf_samples
 {
     /* do nothing for the parent class */
