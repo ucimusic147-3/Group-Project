@@ -33,6 +33,9 @@
    IBOutlet UIButton *button4;
 }
 
+-(IBAction)startRec:(id)sender;
+-(IBAction)stopRec:(id)sender;
+
 -(IBAction)doSlider:(id)sender;
 -(IBAction)button1:(id)sender;
 -(IBAction)button2:(id)sender;

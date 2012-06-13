@@ -9,11 +9,12 @@
 #import "MyView.h"
 
 #import "AQPlayer.h"
-
+#import "AQRecorder.h"
 #import "Singleton.h"
 #import "VoiceTouchPair.h"
 
 extern AQPlayer *aqp;
+extern AQRecorder *aqr;
 extern VoiceTouchPair* VTarray[NUM_VOICES];
 extern enum OutputMode currentMode;
 
@@ -74,6 +75,16 @@ UInt8 const NO_KEY = 255;
     
     referencePixel = Slider.value;
     [self setNeedsDisplay];
+}
+
+-(IBAction)startRec:(id)sender
+{
+    [aqr start];
+}
+
+-(IBAction)stopRec:(id)sender
+{
+    [aqr stop];
 }
 
 
