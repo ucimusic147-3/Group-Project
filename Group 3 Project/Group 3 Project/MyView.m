@@ -86,7 +86,16 @@ UInt8 const NO_KEY = 255;
 {
     [aqr stop];
 }
+-(IBAction)startPlay:(id)sender
+{
+    [aqp resetStartPos];
+    [aqp start];
+}
 
+-(IBAction)stopPlay:(id)sender
+{
+    [aqp stop];
+}
 
 -(IBAction)button1:(id)sender
 {

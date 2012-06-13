@@ -35,6 +35,8 @@
 
 -(IBAction)startRec:(id)sender;
 -(IBAction)stopRec:(id)sender;
+-(IBAction)startPlay:(id)sender;
+-(IBAction)stopPlay:(id)sender;
 
 -(IBAction)doSlider:(id)sender;
 -(IBAction)button1:(id)sender;
