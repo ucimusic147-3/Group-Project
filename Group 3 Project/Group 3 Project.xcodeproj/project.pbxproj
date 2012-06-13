@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1CB9AD29156DBED900255B90 /* AQRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CB9AD28156DBED900255B90 /* AQRecord.m */; };
+		1CB9AD29156DBED900255B90 /* AQRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CB9AD28156DBED900255B90 /* AQRecorder.m */; };
 		21E32E34155D7DC6004831EB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E32E33155D7DC6004831EB /* UIKit.framework */; };
 		21E32E36155D7DC6004831EB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E32E35155D7DC6004831EB /* Foundation.framework */; };
 		21E32E38155D7DC6004831EB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E32E37155D7DC6004831EB /* CoreGraphics.framework */; };
@@ -55,8 +55,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1CB9AD27156DBED900255B90 /* AQRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQRecord.h; sourceTree = "<group>"; };
-		1CB9AD28156DBED900255B90 /* AQRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQRecord.m; sourceTree = "<group>"; };
+		1CB9AD27156DBED900255B90 /* AQRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQRecorder.h; sourceTree = "<group>"; };
+		1CB9AD28156DBED900255B90 /* AQRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQRecorder.m; sourceTree = "<group>"; };
 		21E32E2F155D7DC6004831EB /* Group 3 Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Group 3 Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		21E32E33155D7DC6004831EB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		21E32E35155D7DC6004831EB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -175,8 +175,8 @@
 		21E32E39155D7DC6004831EB /* Group 3 Project */ = {
 			isa = PBXGroup;
 			children = (
-				1CB9AD27156DBED900255B90 /* AQRecord.h */,
-				1CB9AD28156DBED900255B90 /* AQRecord.m */,
+				1CB9AD27156DBED900255B90 /* AQRecorder.h */,
+				1CB9AD28156DBED900255B90 /* AQRecorder.m */,
 				21E32E6B155D7E17004831EB /* AQPlayer_SF.h */,
 				21E32E6C155D7E17004831EB /* AQPlayer_SF.m */,
 				93C7A8A81586D5CB00A3EB3A /* Voice_SF.h */,
@@ -378,7 +378,7 @@
 				21E32E90155D7E17004831EB /* Voice_Sine.m in Sources */,
 				21E32E91155D7E17004831EB /* Voice_Synth.m in Sources */,
 				21E32E92155D7E17004831EB /* Voice.m in Sources */,
-				1CB9AD29156DBED900255B90 /* AQRecord.m in Sources */,
+				1CB9AD29156DBED900255B90 /* AQRecorder.m in Sources */,
 				8DCC348115797873009C96D1 /* Sample.m in Sources */,
 				BC858487157EDDAB00706519 /* FirstViewController.m in Sources */,
 				BC85848D157EDDC900706519 /* SecondViewController.m in Sources */,
