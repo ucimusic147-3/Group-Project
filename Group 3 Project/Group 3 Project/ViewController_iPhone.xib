@@ -43,6 +43,7 @@
 						<int key="NSvFlags">266</int>
 						<string key="NSFrame">{{0, 152}, {320, 44}}</string>
 						<reference key="NSSuperview" ref="746603565"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
@@ -54,19 +55,19 @@
 								<int key="IBUIStyle">1</int>
 								<reference key="IBUIToolbar" ref="92677452"/>
 							</object>
-							<object class="IBUIBarButtonItem" id="793227768">
+							<object class="IBUIBarButtonItem" id="746861730">
 								<string key="IBUITitle">A on/off</string>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								<int key="IBUIStyle">1</int>
 								<reference key="IBUIToolbar" ref="92677452"/>
 							</object>
-							<object class="IBUIBarButtonItem" id="1018540892">
+							<object class="IBUIBarButtonItem" id="215758912">
 								<string key="IBUITitle">File</string>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								<int key="IBUIStyle">1</int>
 								<reference key="IBUIToolbar" ref="92677452"/>
 							</object>
-							<object class="IBUIBarButtonItem" id="451621138">
+							<object class="IBUIBarButtonItem" id="848484290">
 								<string key="IBUITitle">Sine</string>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								<int key="IBUIStyle">1</int>
@@ -79,6 +80,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{-2, 20}, {457, 23}}</string>
 						<reference key="NSSuperview" ref="746603565"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="92677452"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -91,6 +93,7 @@
 				</array>
 				<string key="NSFrame">{{0, 20}, {320, 460}}</string>
 				<reference key="NSSuperview"/>
+				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="81092137"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">3</int>
@@ -170,7 +173,7 @@
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">button4:</string>
-						<reference key="source" ref="793227768"/>
+						<reference key="source" ref="746861730"/>
 						<reference key="destination" ref="746603565"/>
 					</object>
 					<int key="connectionID">71</int>
@@ -178,7 +181,7 @@
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">button3:</string>
-						<reference key="source" ref="1018540892"/>
+						<reference key="source" ref="215758912"/>
 						<reference key="destination" ref="746603565"/>
 					</object>
 					<int key="connectionID">72</int>
@@ -186,7 +189,7 @@
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">button2:</string>
-						<reference key="source" ref="451621138"/>
+						<reference key="source" ref="848484290"/>
 						<reference key="destination" ref="746603565"/>
 					</object>
 					<int key="connectionID">73</int>
@@ -235,9 +238,9 @@
 						<reference key="object" ref="92677452"/>
 						<array class="NSMutableArray" key="children">
 							<reference ref="684217489"/>
-							<reference ref="793227768"/>
-							<reference ref="1018540892"/>
-							<reference ref="451621138"/>
+							<reference ref="746861730"/>
+							<reference ref="215758912"/>
+							<reference ref="848484290"/>
 						</array>
 						<reference key="parent" ref="746603565"/>
 					</object>
@@ -253,17 +256,17 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">67</int>
-						<reference key="object" ref="793227768"/>
+						<reference key="object" ref="746861730"/>
 						<reference key="parent" ref="92677452"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">68</int>
-						<reference key="object" ref="1018540892"/>
+						<reference key="object" ref="215758912"/>
 						<reference key="parent" ref="92677452"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">69</int>
-						<reference key="object" ref="451621138"/>
+						<reference key="object" ref="848484290"/>
 						<reference key="parent" ref="92677452"/>
 					</object>
 				</array>
@@ -292,7 +295,118 @@
 			<nil key="sourceID"/>
 			<int key="maxID">73</int>
 		</object>
-		<object class="IBClassDescriber" key="IBDocument.Classes"/>
+		<object class="IBClassDescriber" key="IBDocument.Classes">
+			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
+				<object class="IBPartialClassDescription">
+					<string key="className">FirstViewController</string>
+					<string key="superclassName">UIViewController</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/FirstViewController.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">MyView</string>
+					<string key="superclassName">UIView</string>
+					<dictionary class="NSMutableDictionary" key="actions">
+						<string key="button1:">id</string>
+						<string key="button2:">id</string>
+						<string key="button3:">id</string>
+						<string key="button4:">id</string>
+						<string key="button5:">id</string>
+						<string key="doSlider:">id</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="actionInfosByName">
+						<object class="IBActionInfo" key="button1:">
+							<string key="name">button1:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="button2:">
+							<string key="name">button2:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="button3:">
+							<string key="name">button3:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="button4:">
+							<string key="name">button4:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="button5:">
+							<string key="name">button5:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="doSlider:">
+							<string key="name">doSlider:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="Slider">UISlider</string>
+						<string key="button4">UIButton</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="Slider">
+							<string key="name">Slider</string>
+							<string key="candidateClassName">UISlider</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="button4">
+							<string key="name">button4</string>
+							<string key="candidateClassName">UIButton</string>
+						</object>
+					</dictionary>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/MyView.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">SecondViewController</string>
+					<string key="superclassName">UIViewController</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/SecondViewController.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">ViewController</string>
+					<string key="superclassName">UIViewController</string>
+					<dictionary class="NSMutableDictionary" key="actions">
+						<string key="loadFirstView:">id</string>
+						<string key="loadSecondView:">id</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="actionInfosByName">
+						<object class="IBActionInfo" key="loadFirstView:">
+							<string key="name">loadFirstView:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="loadSecondView:">
+							<string key="name">loadSecondView:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="firstViewController">UIViewController</string>
+						<string key="secondViewController">UIViewController</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="firstViewController">
+							<string key="name">firstViewController</string>
+							<string key="candidateClassName">UIViewController</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="secondViewController">
+							<string key="name">secondViewController</string>
+							<string key="candidateClassName">UIViewController</string>
+						</object>
+					</dictionary>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/ViewController.h</string>
+					</object>
+				</object>
+			</array>
+		</object>
 		<int key="IBDocument.localizationMode">0</int>
 		<string key="IBDocument.TargetRuntimeIdentifier">IBCocoaTouchFramework</string>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
