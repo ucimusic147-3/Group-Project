@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C4970B8158937B4001A012B /* Sample_Recorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C4970B7158937B3001A012B /* Sample_Recorder.m */; };
 		1CB9AD29156DBED900255B90 /* AQRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CB9AD28156DBED900255B90 /* AQRecorder.m */; };
 		21E32E34155D7DC6004831EB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E32E33155D7DC6004831EB /* UIKit.framework */; };
 		21E32E36155D7DC6004831EB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E32E35155D7DC6004831EB /* Foundation.framework */; };
@@ -55,6 +56,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1C4970B6158937B3001A012B /* Sample_Recorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sample_Recorder.h; sourceTree = "<group>"; };
+		1C4970B7158937B3001A012B /* Sample_Recorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sample_Recorder.m; sourceTree = "<group>"; };
 		1CB9AD27156DBED900255B90 /* AQRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQRecorder.h; sourceTree = "<group>"; };
 		1CB9AD28156DBED900255B90 /* AQRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQRecorder.m; sourceTree = "<group>"; };
 		21E32E2F155D7DC6004831EB /* Group 3 Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Group 3 Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -201,6 +204,8 @@
 				21E32E7C155D7E17004831EB /* SoundFile.m */,
 				8DCC347F15797872009C96D1 /* Sample.h */,
 				8DCC348015797873009C96D1 /* Sample.m */,
+				1C4970B6158937B3001A012B /* Sample_Recorder.h */,
+				1C4970B7158937B3001A012B /* Sample_Recorder.m */,
 				21E32E7D155D7E17004831EB /* ViewController_iPad.xib */,
 				21E32E7E155D7E17004831EB /* ViewController_iPhone.xib */,
 				BC858484157EDDAB00706519 /* FirstViewController.h */,
@@ -384,6 +389,7 @@
 				BC85848D157EDDC900706519 /* SecondViewController.m in Sources */,
 				93BB3C1B15867ED200070867 /* VoiceTouchPair.m in Sources */,
 				93C7A8AA1586D5CB00A3EB3A /* Voice_SF.m in Sources */,
+				1C4970B8158937B4001A012B /* Sample_Recorder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
