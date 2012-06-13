@@ -9,12 +9,14 @@
 #import <Foundation/Foundation.h>
 
 #import "AQPlayer.h"
+#import "AQRecorder.h"
 #import "Sequencer.h"
 
 
 @interface Singleton : NSObject <UIAccelerometerDelegate> {
     
     AQPlayer*   aqp;
+    AQRecorder* aqr;
     
     //Sequencer*  q;
     
