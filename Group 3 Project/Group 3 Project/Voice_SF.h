@@ -7,11 +7,13 @@
 //
 
 #import "Voice_Synth.h"
+#import "Sample_Recorder.h"
 #import "SoundFile.h"
 
 @interface Voice_SF : Voice_Synth
 {
-    SoundFile* sf;
+    Sample_Recorder* sample;
+    Float64 speed;
 }
 
 

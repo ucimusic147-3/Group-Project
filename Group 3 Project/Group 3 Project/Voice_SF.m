@@ -18,14 +18,17 @@
 {
     self = [super initWithNote:(UInt8)_n];
     
-    sf = [[SoundFile alloc] init];
+    sample = [[Sample_Recorder alloc] init];
+    
+    speed = pow(2., (_n - 60)/12.);
     
 	return self;
 }
 
 -(void)fillSampleBuffer:(Float64*)buffer:(UInt32)num_samples
 {
-    [sf fillSampleBuffer:buffer:num_samples:freq];
+    
+    [sample fillSampleBuffer:buffer:num_samples:speed];
 }
 
 @end

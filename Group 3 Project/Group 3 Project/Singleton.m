@@ -9,6 +9,7 @@
 #import "Singleton.h"
 #import "AQPlayer.h"
 #import "AQPlayer_Samp.h"
+#import "AQPlayer_Synth.h"
 
 @implementation Singleton
 
@@ -18,7 +19,7 @@
     
     NSLog(@"Initializing Singleton object.");
     
-    aqp = [[AQPlayer_Samp alloc] init];
+    aqp = [[AQPlayer alloc] init];
     aqr = [[AQRecorder alloc] init];
     
     

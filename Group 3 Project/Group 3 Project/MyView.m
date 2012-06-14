@@ -79,12 +79,14 @@ UInt8 const NO_KEY = 255;
 
 -(IBAction)startRec:(id)sender
 {
+    [aqp stop];
     [aqr start];
 }
 
 -(IBAction)stopRec:(id)sender
 {
     [aqr stop];
+    [aqp start];
 }
 -(IBAction)startPlay:(id)sender
 {
@@ -252,11 +254,11 @@ UInt8 const NO_KEY = 255;
     UInt8 tone = [self referenceKey];
     
     // White keys
-    if ( y >= 2*WIDTH/3  && y <= WIDTH )
+    if ( y >= 2*WIDTH/4  && y <= WIDTH )
     {
         return tone + [MyView toneOffset:tone:keyoffset];
     }
-    else if ( 0 <= y && y <= 2*WIDTH/3 )   // black key
+    else if ( 0 <= y && y <= 2*WIDTH/4 )   // black key
     {
         keyoffset = [self keyOffset:x+KEYWIDTH/2];
         if (abs( keyoffset*KEYWIDTH - (x+[self pixelOffset])) > KEYWIDTH/4)
@@ -302,7 +304,7 @@ UInt8 const NO_KEY = 255;
         [[UIColor darkGrayColor] set];
         CGPoint pt = [touch locationInView:self];
         
-        if ( pt.y >= 2*WIDTH/3  && pt.y <= WIDTH )
+        if ( pt.y >= 2*WIDTH/4  && pt.y <= WIDTH )
         {
             UIRectFill(CGRectMake([self keyOffset:pt.x]*KEYWIDTH-offset+thickness , 0 ,KEYWIDTH-thickness , WIDTH));
         }
@@ -325,11 +327,11 @@ UInt8 const NO_KEY = 255;
                     break;
                 case 11: case 4:
                     key++;
-                    UIRectFill(CGRectMake(x,0,KEYWIDTH/2,2*WIDTH/3));
+                    UIRectFill(CGRectMake(x,0,KEYWIDTH/2,2*WIDTH/4));
                     break;
                 default:
                     key +=2;
-                    UIRectFill(CGRectMake(x,0,KEYWIDTH/2,2*WIDTH/3));
+                    UIRectFill(CGRectMake(x,0,KEYWIDTH/2,2*WIDTH/4));
             }
         }
     }
@@ -343,10 +345,10 @@ UInt8 const NO_KEY = 255;
         [[UIColor lightGrayColor] set];
         CGPoint pt = [touch locationInView:self];
         
-        if (0 <= pt.y && pt.y <= 2*WIDTH/3)
+        if (0 <= pt.y && pt.y <= 2*WIDTH/4)
         {
             UInt8 keyoffset = [self keyOffset:pt.x+KEYWIDTH/2];
-            UIRectFill(CGRectMake(keyoffset*KEYWIDTH-offset-KEYWIDTH/4,0,KEYWIDTH/2,2*WIDTH/3));
+            UIRectFill(CGRectMake(keyoffset*KEYWIDTH-offset-KEYWIDTH/4,0,KEYWIDTH/2,2*WIDTH/4));
         }
     }
     }

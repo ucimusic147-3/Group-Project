@@ -34,7 +34,7 @@ void AQRecBufferCallback (void                                *inUserData,
 	
 	SInt16 *in_buffer = (SInt16*)inAQBuffer->mAudioData;
     
-    //  NSLog(@"AQRecBufferCallback - %d %d [%d] [%d]", inNumberPacketDescriptions, aqr->dataFormat.mBytesPerPacket, in_buffer[0], in_buffer[1]);
+  //  NSLog(@"AQRecBufferCallback - %ld [%d] [%d]", inNumberPacketDescriptions, in_buffer[0], in_buffer[1]);
 	
 	Float64 buffer[numFrames];
 	memset(buffer,0,sizeof(Float64)*numFrames);

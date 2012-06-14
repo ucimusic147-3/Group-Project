@@ -19,9 +19,9 @@ extern AQRecorder *aqr;
     readPos = 0;
 }
 
--(void)fillSampleBuffer:(Float64*)buffer:(UInt32)num_buf_samples
+-(void)fillSampleBuffer:(Float64*)buffer:(UInt32)num_buf_samples:(Float64)pitch
 {
-    Float64 pitch = .7;
+  //  Float64 pitch = 1.0;
     
     /* To avoid a crash, ensure we're not accessing beyond the audioBuffer array. */
     /* This is not the best solution, but it's a quick one. */

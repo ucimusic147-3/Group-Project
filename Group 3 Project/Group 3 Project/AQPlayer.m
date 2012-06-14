@@ -24,6 +24,7 @@ void AQBufferCallback(void *inUserData, AudioQueueRef inAQ, AudioQueueBufferRef 
 {
     /* compute the requested number of sample frames of audio */
 	const SInt32 numFrames = (inAQBuffer->mAudioDataBytesCapacity) / sizeof(SInt16);
+//    NSLog(@"AQBufferCallback");
     
     /* create a temporary buffer of Float64 type samples */
 	Float64 buffer[numFrames];
@@ -62,14 +63,14 @@ void AQBufferCallback(void *inUserData, AudioQueueRef inAQ, AudioQueueBufferRef 
     self = [super init];
     
 	aqp = self;
+
+    [self start];
     
     for (UInt8 i = 0; i < NUM_VOICES; i++)
     {
         VTarray[i] = [[VoiceTouchPair alloc] init];
     }
 	
-	//[self start];
-    
 	return self;
 }
 

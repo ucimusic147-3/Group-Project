@@ -12,7 +12,7 @@
 
 #import <UIKit/UIKit.h>
 
-#define WIDTH 300.
+#define WIDTH 380.
 #define HEIGHT 480.
 #define KEYWIDTH 60
 #define MIDDLE_C 60
@@ -29,7 +29,7 @@
 //    Voice_Synth* freevoice;
     BOOL accelerometerOn;
     
-    IBOutlet UISlider* Slider;
+    IBOutlet UISlider *Slider;
    IBOutlet UIButton *button4;
 }
 
