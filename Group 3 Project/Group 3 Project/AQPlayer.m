@@ -68,7 +68,7 @@ void AQBufferCallback(void *inUserData, AudioQueueRef inAQ, AudioQueueBufferRef 
         VTarray[i] = [[VoiceTouchPair alloc] init];
     }
 	
-	[self start];
+	//[self start];
     
 	return self;
 }
