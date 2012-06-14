@@ -1,8 +1,8 @@
-//  Sia Mozaffari
 //  MyView.m
 //  Music147_2012
 //
 //  Created by Kojiro Umezaki on 5/2/12.
+//  Extended by Jetpack Dinosaurs 6/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
@@ -25,17 +25,6 @@ UInt8 const NO_KEY = 255;
 @implementation MyView
 
 
-/*
-- (id)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
-        [[UIAccelerometer sharedAccelerometer] setDelegate:self];
-        NSLog(@"hello myview");
-    }
-    return self;
-}
-*/
 
 -(void)awakeFromNib
 {
@@ -88,52 +77,49 @@ UInt8 const NO_KEY = 255;
     [aqr stop];
     [aqp start];
 }
--(IBAction)startPlay:(id)sender
-{
-    [aqp resetStartPos];
-    [aqp start];
+
+
+-(IBAction)sawButton:(id)sender
+{    
+    [VoiceTouchPair setMode:Saw];
 }
 
--(IBAction)stopPlay:(id)sender
+-(IBAction)triButton:(id)sender
 {
-    [aqp stop];
+    [VoiceTouchPair setMode:Triangle];
 }
 
--(IBAction)button1:(id)sender
-{
-    //   NSLog(@"toggleVoice0");
-    //   [aqp voiceToggle:0];
-    referencePixel -= 15;
-    [self setNeedsDisplay];
-    
-}
-
-
--(IBAction)button2:(id)sender
+-(IBAction)sineButton:(id)sender
 {
     [VoiceTouchPair setMode:Sine];
 }
 
--(IBAction)button3:(id)sender
+-(IBAction)sampleButton:(id)sender
 {
-    [VoiceTouchPair setMode:File];
+    [VoiceTouchPair setMode:Record];
 }
 
--(IBAction)button4:(id)sender
+-(IBAction)sqrButton:(id)sender
+{
+    [VoiceTouchPair setMode:Square];
+}
+
+-(IBAction)accButton:(id)sender
 {
     //   NSLog(@"toggleVoice2");
     if (accelerometerOn)
+    {
         accelerometerOn = NO;
-    else 
+        [accButton setTitle: @"accOff" forState: UIControlStateNormal];
+    }
+    else
+    { 
         accelerometerOn = YES;
+        [accButton setTitle: @"accOn" forState: UIControlStateNormal];
+    }
 }
 
--(IBAction)button5:(id)sender
-{
-    //   NSLog(@"toggleVoice3");
-    referencePixel+=15;
-    [self setNeedsDisplay];
-}
+
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
@@ -278,9 +264,6 @@ UInt8 const NO_KEY = 255;
 // 320 X 460
 -(void) drawRect:(CGRect)rect
 {
-    //   UIColor *rectColor = [UIColor greenColor]; [rectColor set];
-    //   CGPoint pt = [touch locationInView:self];
-    //   UIRectFill(CGRectMake(0,0,width,height));  fillBG
     
     UInt8 offset = [self pixelOffset];
     UInt8 thickness = 4;

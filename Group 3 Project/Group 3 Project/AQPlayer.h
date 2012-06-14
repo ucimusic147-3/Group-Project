@@ -3,6 +3,7 @@
 //  MInC
 //
 //  Created by Kojiro Umezaki on 4/4/10.
+//  Adapted by Jetpack Dinosaurs 6/12.
 //  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 
@@ -26,7 +27,6 @@
 	AudioQueueBufferRef			buffers[kNumberBuffers];
 	AudioStreamBasicDescription	dataFormat;
     
-    //Voice* voices[NUM_VOICES];
     
 }
 
@@ -34,9 +34,8 @@
 -(void)setup;
 -(OSStatus)start;
 -(OSStatus)stop;
--(void)resetStartPos;
 -(void)fillAudioBuffer:(Float64*)buffer:(UInt32)num_samples;
--(void)reportElapsedTime:(Float64)elapsed_time;
+
 
 
 

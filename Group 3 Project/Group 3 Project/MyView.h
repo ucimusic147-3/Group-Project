@@ -1,12 +1,8 @@
-//  Sia Mozaffari
-// Eric
-// Profanity!!!!
-// Dennis
-//hello dennis
 //  MyView.h
 //  Music147_2012
 //
 //  Created by Kojiro Umezaki on 5/2/12.
+//  Extended by Jetpack Dinosaurs 6/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
@@ -22,28 +18,25 @@
 
 
 @interface MyView : UIView <UIAccelerometerDelegate> {
-//    UITouch* touch[NUM_VOICES];
+
     
     UInt16 referencePixel;
     
-//    Voice_Synth* freevoice;
     BOOL accelerometerOn;
     
     IBOutlet UISlider *Slider;
-   IBOutlet UIButton *button4;
+    IBOutlet UIButton *accButton;
 }
 
 -(IBAction)startRec:(id)sender;
 -(IBAction)stopRec:(id)sender;
--(IBAction)startPlay:(id)sender;
--(IBAction)stopPlay:(id)sender;
 
 -(IBAction)doSlider:(id)sender;
--(IBAction)button1:(id)sender;
--(IBAction)button2:(id)sender;
--(IBAction)button3:(id)sender;
--(IBAction)button4:(id)sender;
--(IBAction)button5:(id)sender;
+-(IBAction)sineButton:(id)sender;
+-(IBAction)sampleButton:(id)sender;
+-(IBAction)sqrButton:(id)sender;
+-(IBAction)triButton:(id)sender;
+-(IBAction)accButton:(id)sender;
 
 -(UInt8)referenceKey;
 -(UInt8)pixelOffset;

@@ -3,18 +3,18 @@
 //  Music147_2012
 //
 //  Created by Kojiro Umezaki on 4/25/12.
+//  Refitted by Jetpack Dinosaurs 6/12
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-/* number of voice */
+/* maximum number of voices */
 #define NUM_VOICES   10
 
 extern UInt8 const NO_KEY;
 
 @interface Voice : NSObject {
     UInt8 onCount;
-
 }
 
 @property UInt8 note;
@@ -26,6 +26,5 @@ extern UInt8 const NO_KEY;
 -(void)on;
 -(void)off;
 
-+(UInt8)getCount;
-
++(Float64)getAmp;
 @end

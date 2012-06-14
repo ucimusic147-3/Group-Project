@@ -3,17 +3,15 @@
 //  MInC
 //
 //  Created by Kojiro Umezaki on 4/4/10.
+//  Adapted by Jetpack Dinosaurs 6/12.
 //  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 
 #import "AQPlayer.h"
-//#import "Voice_SF.h"
-//#import "SoundFile.h"
 #import "Singleton.h"
 
 AQPlayer *aqp = nil;
 
-extern Singleton* gSing;
 extern UInt8 voicecount;
 extern VoiceTouchPair* VTarray[NUM_VOICES];
 
@@ -46,9 +44,6 @@ void AQBufferCallback(void *inUserData, AudioQueueRef inAQ, AudioQueueBufferRef 
 	/* queue the updated AudioQueueBuffer */
 	AudioQueueEnqueueBuffer(inAQ, inAQBuffer, 0, nil);
     
-    /* compute and report elapsed time */
-    Float64 elapsed_time = numFrames / kSR;
-    [aqp reportElapsedTime:elapsed_time];
 }
 
 @implementation AQPlayer
@@ -124,10 +119,6 @@ void AQBufferCallback(void *inUserData, AudioQueueRef inAQ, AudioQueueBufferRef 
 	return result;
 }
 
--(void)resetStartPos
-{
-}
-
 
 -(void)fillAudioBuffer:(Float64*)buffer:(UInt32)num_samples
 {
@@ -152,15 +143,6 @@ void AQBufferCallback(void *inUserData, AudioQueueRef inAQ, AudioQueueBufferRef 
         }
     
 }
-
-
--(void)reportElapsedTime:(Float64)elapsed_time
-{
-    //    NSLog(@"elapsed time %f",elapsed_time);
-    
-    [gSing updateTime:elapsed_time];
-}
-
 
 
 @end

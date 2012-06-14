@@ -3,6 +3,7 @@
 //  Music147_2012
 //
 //  Created by Kojiro Umezaki on 4/25/12.
+//  Refitted by Jetpack Dinosaurs 6/12
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
@@ -22,12 +23,10 @@ static UInt8 voicecount = 0;
     onCount=1;
     voicecount++;
  
-   // NSLog(@"%d" , voicecount);
     
     if (n != NO_KEY)
         note = n;
     
-    NSLog(@"%d voices" , [Voice getCount]);
     
     return self;
 }
@@ -56,9 +55,11 @@ static UInt8 voicecount = 0;
     }
 }
 
-+(UInt8)getCount
++(Float64)getAmp
 {
-    return voicecount;
+    if (voicecount == 0)
+        return 1.0;
+    return 1./(voicecount);
 }
 
 @end

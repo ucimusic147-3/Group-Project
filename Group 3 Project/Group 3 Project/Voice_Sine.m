@@ -3,6 +3,7 @@
 //  Music147_2012
 //
 //  Created by Kojiro Umezaki on 4/25/12.
+//  Refitted by Jetpack Dinosaurs 6/12
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
@@ -18,7 +19,7 @@ extern UInt8 voicecount;
 {
     deltaTheta = freq / kSR;
     
-    Float64 amp = (Float64)1.0/(1+[Voice getCount]);
+    Float64 amp = [Voice getAmp];
     
 	for (SInt32 i = 0; i < num_samples; i++)
 	{

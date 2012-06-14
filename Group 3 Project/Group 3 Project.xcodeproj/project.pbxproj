@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1C4970B8158937B4001A012B /* Sample_Recorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C4970B7158937B3001A012B /* Sample_Recorder.m */; };
-		1C4970BB158938CD001A012B /* Sample_SoundFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C4970BA158938CD001A012B /* Sample_SoundFile.m */; };
-		1C4970C215893A48001A012B /* AQPlayer_Samp.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C4970C115893A48001A012B /* AQPlayer_Samp.m */; };
 		1CB9AD29156DBED900255B90 /* AQRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CB9AD28156DBED900255B90 /* AQRecorder.m */; };
 		21E32E34155D7DC6004831EB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E32E33155D7DC6004831EB /* UIKit.framework */; };
 		21E32E36155D7DC6004831EB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E32E35155D7DC6004831EB /* Foundation.framework */; };
@@ -23,28 +20,20 @@
 		21E32E57155D7DC7004831EB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E32E35155D7DC6004831EB /* Foundation.framework */; };
 		21E32E5F155D7DC7004831EB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 21E32E5D155D7DC7004831EB /* InfoPlist.strings */; };
 		21E32E62155D7DC7004831EB /* Group_3_ProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E32E61155D7DC7004831EB /* Group_3_ProjectTests.m */; };
-		21E32E85155D7E17004831EB /* AQPlayer_SF.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E32E6C155D7E17004831EB /* AQPlayer_SF.m */; };
-		21E32E86155D7E17004831EB /* AQPlayer_Synth.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E32E6E155D7E17004831EB /* AQPlayer_Synth.m */; };
 		21E32E87155D7E17004831EB /* AQPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E32E70155D7E17004831EB /* AQPlayer.m */; };
 		21E32E88155D7E17004831EB /* MyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E32E72155D7E17004831EB /* MyView.m */; };
-		21E32E89155D7E17004831EB /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E32E74155D7E17004831EB /* Note.m */; };
-		21E32E8A155D7E17004831EB /* Sequence.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E32E76155D7E17004831EB /* Sequence.m */; };
-		21E32E8B155D7E17004831EB /* Sequencer.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E32E78155D7E17004831EB /* Sequencer.m */; };
 		21E32E8C155D7E17004831EB /* Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E32E7A155D7E17004831EB /* Singleton.m */; };
-		21E32E8D155D7E17004831EB /* SoundFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E32E7C155D7E17004831EB /* SoundFile.m */; };
 		21E32E8E155D7E17004831EB /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21E32E7D155D7E17004831EB /* ViewController_iPad.xib */; };
 		21E32E8F155D7E17004831EB /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21E32E7E155D7E17004831EB /* ViewController_iPhone.xib */; };
 		21E32E90155D7E17004831EB /* Voice_Sine.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E32E80155D7E17004831EB /* Voice_Sine.m */; };
 		21E32E91155D7E17004831EB /* Voice_Synth.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E32E82155D7E17004831EB /* Voice_Synth.m */; };
 		21E32E92155D7E17004831EB /* Voice.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E32E84155D7E17004831EB /* Voice.m */; };
 		21E32E94155D7E31004831EB /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E32E93155D7E31004831EB /* AudioToolbox.framework */; };
-		8DCC348115797873009C96D1 /* Sample.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DCC348015797873009C96D1 /* Sample.m */; };
 		93BB3C1B15867ED200070867 /* VoiceTouchPair.m in Sources */ = {isa = PBXBuildFile; fileRef = 93BB3C1A15867ED200070867 /* VoiceTouchPair.m */; };
-		93C7A8AA1586D5CB00A3EB3A /* Voice_SF.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C7A8A91586D5CB00A3EB3A /* Voice_SF.m */; };
-		BC858487157EDDAB00706519 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC858485157EDDAB00706519 /* FirstViewController.m */; };
-		BC858488157EDDAB00706519 /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC858486157EDDAB00706519 /* FirstViewController.xib */; };
-		BC85848D157EDDC900706519 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC85848B157EDDC900706519 /* SecondViewController.m */; };
-		BC85848E157EDDC900706519 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC85848C157EDDC900706519 /* SecondViewController.xib */; };
+		93F656261589920B009C4220 /* Voice_Saw.m in Sources */ = {isa = PBXBuildFile; fileRef = 93F656251589920B009C4220 /* Voice_Saw.m */; };
+		93F6562915899759009C4220 /* Voice_Sample.m in Sources */ = {isa = PBXBuildFile; fileRef = 93F6562815899759009C4220 /* Voice_Sample.m */; };
+		93F6563015899954009C4220 /* Voice_Square.m in Sources */ = {isa = PBXBuildFile; fileRef = 93F6562F15899954009C4220 /* Voice_Square.m */; };
+		93F6563415899A96009C4220 /* Voice_Triangle.m in Sources */ = {isa = PBXBuildFile; fileRef = 93F6563315899A96009C4220 /* Voice_Triangle.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,12 +47,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1C4970B6158937B3001A012B /* Sample_Recorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sample_Recorder.h; sourceTree = "<group>"; };
-		1C4970B7158937B3001A012B /* Sample_Recorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sample_Recorder.m; sourceTree = "<group>"; };
-		1C4970B9158938CD001A012B /* Sample_SoundFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sample_SoundFile.h; sourceTree = "<group>"; };
-		1C4970BA158938CD001A012B /* Sample_SoundFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sample_SoundFile.m; sourceTree = "<group>"; };
-		1C4970C015893A48001A012B /* AQPlayer_Samp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQPlayer_Samp.h; sourceTree = "<group>"; };
-		1C4970C115893A48001A012B /* AQPlayer_Samp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQPlayer_Samp.m; sourceTree = "<group>"; };
 		1CB9AD27156DBED900255B90 /* AQRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQRecorder.h; sourceTree = "<group>"; };
 		1CB9AD28156DBED900255B90 /* AQRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQRecorder.m; sourceTree = "<group>"; };
 		21E32E2F155D7DC6004831EB /* Group 3 Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Group 3 Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,24 +67,12 @@
 		21E32E5E155D7DC7004831EB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		21E32E60155D7DC7004831EB /* Group_3_ProjectTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Group_3_ProjectTests.h; sourceTree = "<group>"; };
 		21E32E61155D7DC7004831EB /* Group_3_ProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Group_3_ProjectTests.m; sourceTree = "<group>"; };
-		21E32E6B155D7E17004831EB /* AQPlayer_SF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQPlayer_SF.h; sourceTree = "<group>"; };
-		21E32E6C155D7E17004831EB /* AQPlayer_SF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQPlayer_SF.m; sourceTree = "<group>"; };
-		21E32E6D155D7E17004831EB /* AQPlayer_Synth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQPlayer_Synth.h; sourceTree = "<group>"; };
-		21E32E6E155D7E17004831EB /* AQPlayer_Synth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQPlayer_Synth.m; sourceTree = "<group>"; };
 		21E32E6F155D7E17004831EB /* AQPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQPlayer.h; sourceTree = "<group>"; };
 		21E32E70155D7E17004831EB /* AQPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQPlayer.m; sourceTree = "<group>"; };
 		21E32E71155D7E17004831EB /* MyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyView.h; sourceTree = "<group>"; };
 		21E32E72155D7E17004831EB /* MyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyView.m; sourceTree = "<group>"; };
-		21E32E73155D7E17004831EB /* Note.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Note.h; sourceTree = "<group>"; };
-		21E32E74155D7E17004831EB /* Note.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Note.m; sourceTree = "<group>"; };
-		21E32E75155D7E17004831EB /* Sequence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sequence.h; sourceTree = "<group>"; };
-		21E32E76155D7E17004831EB /* Sequence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sequence.m; sourceTree = "<group>"; };
-		21E32E77155D7E17004831EB /* Sequencer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sequencer.h; sourceTree = "<group>"; };
-		21E32E78155D7E17004831EB /* Sequencer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sequencer.m; sourceTree = "<group>"; };
 		21E32E79155D7E17004831EB /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
 		21E32E7A155D7E17004831EB /* Singleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Singleton.m; sourceTree = "<group>"; };
-		21E32E7B155D7E17004831EB /* SoundFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundFile.h; sourceTree = "<group>"; };
-		21E32E7C155D7E17004831EB /* SoundFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundFile.m; sourceTree = "<group>"; };
 		21E32E7D155D7E17004831EB /* ViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController_iPad.xib; sourceTree = "<group>"; };
 		21E32E7E155D7E17004831EB /* ViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController_iPhone.xib; sourceTree = "<group>"; };
 		21E32E7F155D7E17004831EB /* Voice_Sine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Voice_Sine.h; sourceTree = "<group>"; };
@@ -111,18 +82,16 @@
 		21E32E83155D7E17004831EB /* Voice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Voice.h; sourceTree = "<group>"; };
 		21E32E84155D7E17004831EB /* Voice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Voice.m; sourceTree = "<group>"; };
 		21E32E93155D7E31004831EB /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		8DCC347F15797872009C96D1 /* Sample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sample.h; sourceTree = "<group>"; };
-		8DCC348015797873009C96D1 /* Sample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sample.m; sourceTree = "<group>"; };
 		93BB3C1915867ED200070867 /* VoiceTouchPair.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoiceTouchPair.h; sourceTree = "<group>"; };
 		93BB3C1A15867ED200070867 /* VoiceTouchPair.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoiceTouchPair.m; sourceTree = "<group>"; };
-		93C7A8A81586D5CB00A3EB3A /* Voice_SF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Voice_SF.h; sourceTree = "<group>"; };
-		93C7A8A91586D5CB00A3EB3A /* Voice_SF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Voice_SF.m; sourceTree = "<group>"; };
-		BC858484157EDDAB00706519 /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		BC858485157EDDAB00706519 /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		BC858486157EDDAB00706519 /* FirstViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstViewController.xib; sourceTree = "<group>"; };
-		BC85848A157EDDC900706519 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		BC85848B157EDDC900706519 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		BC85848C157EDDC900706519 /* SecondViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
+		93F656241589920B009C4220 /* Voice_Saw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Voice_Saw.h; sourceTree = "<group>"; };
+		93F656251589920B009C4220 /* Voice_Saw.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Voice_Saw.m; sourceTree = "<group>"; };
+		93F6562715899759009C4220 /* Voice_Sample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Voice_Sample.h; sourceTree = "<group>"; };
+		93F6562815899759009C4220 /* Voice_Sample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Voice_Sample.m; sourceTree = "<group>"; };
+		93F6562E15899954009C4220 /* Voice_Square.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Voice_Square.h; sourceTree = "<group>"; };
+		93F6562F15899954009C4220 /* Voice_Square.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Voice_Square.m; sourceTree = "<group>"; };
+		93F6563215899A96009C4220 /* Voice_Triangle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Voice_Triangle.h; sourceTree = "<group>"; };
+		93F6563315899A96009C4220 /* Voice_Triangle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Voice_Triangle.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,50 +155,30 @@
 			children = (
 				1CB9AD27156DBED900255B90 /* AQRecorder.h */,
 				1CB9AD28156DBED900255B90 /* AQRecorder.m */,
-				21E32E6B155D7E17004831EB /* AQPlayer_SF.h */,
-				21E32E6C155D7E17004831EB /* AQPlayer_SF.m */,
-				93C7A8A81586D5CB00A3EB3A /* Voice_SF.h */,
-				93C7A8A91586D5CB00A3EB3A /* Voice_SF.m */,
-				21E32E6D155D7E17004831EB /* AQPlayer_Synth.h */,
-				21E32E6E155D7E17004831EB /* AQPlayer_Synth.m */,
+				93F6563215899A96009C4220 /* Voice_Triangle.h */,
+				93F6563315899A96009C4220 /* Voice_Triangle.m */,
+				93F6562715899759009C4220 /* Voice_Sample.h */,
+				93F6562815899759009C4220 /* Voice_Sample.m */,
 				21E32E6F155D7E17004831EB /* AQPlayer.h */,
 				21E32E70155D7E17004831EB /* AQPlayer.m */,
 				93BB3C1915867ED200070867 /* VoiceTouchPair.h */,
 				93BB3C1A15867ED200070867 /* VoiceTouchPair.m */,
 				21E32E71155D7E17004831EB /* MyView.h */,
 				21E32E72155D7E17004831EB /* MyView.m */,
-				21E32E73155D7E17004831EB /* Note.h */,
-				21E32E74155D7E17004831EB /* Note.m */,
-				21E32E75155D7E17004831EB /* Sequence.h */,
-				21E32E76155D7E17004831EB /* Sequence.m */,
-				21E32E77155D7E17004831EB /* Sequencer.h */,
-				21E32E78155D7E17004831EB /* Sequencer.m */,
 				21E32E79155D7E17004831EB /* Singleton.h */,
 				21E32E7A155D7E17004831EB /* Singleton.m */,
-				21E32E7B155D7E17004831EB /* SoundFile.h */,
-				21E32E7C155D7E17004831EB /* SoundFile.m */,
-				8DCC347F15797872009C96D1 /* Sample.h */,
-				8DCC348015797873009C96D1 /* Sample.m */,
-				1C4970B6158937B3001A012B /* Sample_Recorder.h */,
-				1C4970B7158937B3001A012B /* Sample_Recorder.m */,
-				1C4970B9158938CD001A012B /* Sample_SoundFile.h */,
-				1C4970BA158938CD001A012B /* Sample_SoundFile.m */,
-				1C4970C015893A48001A012B /* AQPlayer_Samp.h */,
-				1C4970C115893A48001A012B /* AQPlayer_Samp.m */,
 				21E32E7D155D7E17004831EB /* ViewController_iPad.xib */,
 				21E32E7E155D7E17004831EB /* ViewController_iPhone.xib */,
-				BC858484157EDDAB00706519 /* FirstViewController.h */,
-				BC85848A157EDDC900706519 /* SecondViewController.h */,
-				BC85848B157EDDC900706519 /* SecondViewController.m */,
-				BC85848C157EDDC900706519 /* SecondViewController.xib */,
-				BC858485157EDDAB00706519 /* FirstViewController.m */,
-				BC858486157EDDAB00706519 /* FirstViewController.xib */,
 				21E32E7F155D7E17004831EB /* Voice_Sine.h */,
 				21E32E80155D7E17004831EB /* Voice_Sine.m */,
 				21E32E81155D7E17004831EB /* Voice_Synth.h */,
 				21E32E82155D7E17004831EB /* Voice_Synth.m */,
 				21E32E83155D7E17004831EB /* Voice.h */,
 				21E32E84155D7E17004831EB /* Voice.m */,
+				93F656241589920B009C4220 /* Voice_Saw.h */,
+				93F656251589920B009C4220 /* Voice_Saw.m */,
+				93F6562E15899954009C4220 /* Voice_Square.h */,
+				93F6562F15899954009C4220 /* Voice_Square.m */,
 				21E32E42155D7DC6004831EB /* AppDelegate.h */,
 				21E32E43155D7DC7004831EB /* AppDelegate.m */,
 				21E32E45155D7DC7004831EB /* ViewController.h */,
@@ -342,8 +291,6 @@
 				21E32E3E155D7DC6004831EB /* InfoPlist.strings in Resources */,
 				21E32E8E155D7E17004831EB /* ViewController_iPad.xib in Resources */,
 				21E32E8F155D7E17004831EB /* ViewController_iPhone.xib in Resources */,
-				BC858488157EDDAB00706519 /* FirstViewController.xib in Resources */,
-				BC85848E157EDDC900706519 /* SecondViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,27 +328,18 @@
 				21E32E40155D7DC6004831EB /* main.m in Sources */,
 				21E32E44155D7DC7004831EB /* AppDelegate.m in Sources */,
 				21E32E47155D7DC7004831EB /* ViewController.m in Sources */,
-				21E32E85155D7E17004831EB /* AQPlayer_SF.m in Sources */,
-				21E32E86155D7E17004831EB /* AQPlayer_Synth.m in Sources */,
 				21E32E87155D7E17004831EB /* AQPlayer.m in Sources */,
 				21E32E88155D7E17004831EB /* MyView.m in Sources */,
-				21E32E89155D7E17004831EB /* Note.m in Sources */,
-				21E32E8A155D7E17004831EB /* Sequence.m in Sources */,
-				21E32E8B155D7E17004831EB /* Sequencer.m in Sources */,
 				21E32E8C155D7E17004831EB /* Singleton.m in Sources */,
-				21E32E8D155D7E17004831EB /* SoundFile.m in Sources */,
 				21E32E90155D7E17004831EB /* Voice_Sine.m in Sources */,
 				21E32E91155D7E17004831EB /* Voice_Synth.m in Sources */,
 				21E32E92155D7E17004831EB /* Voice.m in Sources */,
 				1CB9AD29156DBED900255B90 /* AQRecorder.m in Sources */,
-				8DCC348115797873009C96D1 /* Sample.m in Sources */,
-				BC858487157EDDAB00706519 /* FirstViewController.m in Sources */,
-				BC85848D157EDDC900706519 /* SecondViewController.m in Sources */,
 				93BB3C1B15867ED200070867 /* VoiceTouchPair.m in Sources */,
-				93C7A8AA1586D5CB00A3EB3A /* Voice_SF.m in Sources */,
-				1C4970B8158937B4001A012B /* Sample_Recorder.m in Sources */,
-				1C4970BB158938CD001A012B /* Sample_SoundFile.m in Sources */,
-				1C4970C215893A48001A012B /* AQPlayer_Samp.m in Sources */,
+				93F656261589920B009C4220 /* Voice_Saw.m in Sources */,
+				93F6562915899759009C4220 /* Voice_Sample.m in Sources */,
+				93F6563015899954009C4220 /* Voice_Square.m in Sources */,
+				93F6563415899A96009C4220 /* Voice_Triangle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

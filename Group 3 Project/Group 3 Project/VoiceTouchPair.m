@@ -2,7 +2,7 @@
 //  VoiceTouchPair.m
 //  Group 3 Project
 //
-//  Created by Lab User on 6/11/12.
+//  Created by Jetpack Dinosaurs on 6/11/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
@@ -72,10 +72,16 @@ static enum OutputMode currentMode = Sine;
 {
     switch (currentMode)
     {
+        case Saw:
+            return [[Voice_Saw alloc] initWithNote:midi];
         case Sine:
             return [[Voice_Sine alloc] initWithNote:midi];
-        case File:
-            return [[Voice_SF alloc] initWithNote:midi];
+        case Record:
+            return [[Voice_Sample alloc] initWithNote:midi];
+        case Square:
+            return [[Voice_Square alloc] initWithNote:midi];
+        case Triangle:
+            return [[Voice_Triangle alloc] initWithNote:midi];
     }
 }
 

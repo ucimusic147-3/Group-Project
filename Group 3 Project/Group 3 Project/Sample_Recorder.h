@@ -9,7 +9,7 @@
 #import "Sample.h"
 
 @interface Sample_Recorder : Sample {
-    UInt32 readPos;
+ //   UInt32 readPos;
     
 }
 

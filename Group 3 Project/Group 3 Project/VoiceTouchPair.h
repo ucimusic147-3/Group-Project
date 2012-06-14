@@ -2,17 +2,19 @@
 //  VoiceTouchPair.h
 //  Group 3 Project
 //
-//  Created by Lab User on 6/11/12.
+//  Created by Jetpack Dinosaurs on 6/11/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import "Voice_Sine.h"
-#import "Voice_SF.h"
+#import "Voice_Sample.h"
+#import "Voice_Saw.h"
+#import "Voice_Square.h"
+#import "Voice_Triangle.h"
 
 
-
-enum OutputMode {Sine , File};
+enum OutputMode {Sine , Record , Saw , Square , Triangle};
 
 
 @interface VoiceTouchPair : NSObject
