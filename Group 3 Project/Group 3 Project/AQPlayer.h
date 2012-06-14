@@ -1,6 +1,5 @@
 //
 //  AQPlayer.h
-//  MInC
 //
 //  Created by Kojiro Umezaki on 4/4/10.
 //  Adapted by Jetpack Dinosaurs 6/12.

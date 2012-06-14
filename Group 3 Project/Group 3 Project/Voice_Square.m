@@ -7,7 +7,7 @@
 //
 
 #import "Voice_Square.h"
-#define Nmax 200
+#define Nmax 20
 
 @implementation Voice_Square
 

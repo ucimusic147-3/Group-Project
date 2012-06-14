@@ -38,8 +38,7 @@ UInt8 const NO_KEY = 255;
 {
     if ( accelerometerOn )
     {
-       NSLog(@"accelerometer!  %f %f %f",acceleration.x,acceleration.y,acceleration.z);
-        if (fabs(acceleration.y) > .1) {
+     if (fabs(acceleration.y) > .1) {
             
         
         Slider.value -= 100*acceleration.y;
@@ -54,7 +53,6 @@ UInt8 const NO_KEY = 255;
                 UInt8 note = [self chooseTone:pt.x:pt.y];
                 [VoiceTouchPair setNote:vt:note];
             }
-            //        NSLog(@"Began (%f , %f)", pt.x , pt.y);
         }
         [self setNeedsDisplay];
         }}
@@ -106,7 +104,6 @@ UInt8 const NO_KEY = 255;
 
 -(IBAction)accButton:(id)sender
 {
-    //   NSLog(@"toggleVoice2");
     if (accelerometerOn)
     {
         accelerometerOn = NO;
@@ -123,7 +120,6 @@ UInt8 const NO_KEY = 255;
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    //   NSLog(@"%d",touches.count);
     
     for (UITouch* t in touches)
     {
@@ -134,7 +130,6 @@ UInt8 const NO_KEY = 255;
             UInt8 note = [self chooseTone:pt.x:pt.y];
             [VoiceTouchPair setNote:vtPair:note];
         }
-//        NSLog(@"Began (%f , %f)", pt.x , pt.y);
     }
     [self setNeedsDisplay];
 }
@@ -152,7 +147,6 @@ UInt8 const NO_KEY = 255;
                 UInt8 note = [self chooseTone:pt.x:pt.y];
                 [VoiceTouchPair setNote:vtPair:note];
             }
-            //        NSLog(@"Began (%f , %f)", pt.x , pt.y);
         }
         [self setNeedsDisplay];
     }
@@ -182,7 +176,6 @@ UInt8 const NO_KEY = 255;
     UInt8 octave = referencePixel/octaveWidth;
     UInt16 cKeyOffset = (referencePixel % octaveWidth) / KEYWIDTH;  // how many steps above c?
     UInt8 cToneOffset = [MyView toneOffset:0:cKeyOffset];
- //   NSLog(@"octave %d cKeyoffset %d ctoneoffset %d" , octave , cKeyOffset , cToneOffset);
     return OCTAVE_STEPS*octave + cToneOffset;       // octaves begin on c
 }
 

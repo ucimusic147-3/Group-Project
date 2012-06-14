@@ -9,7 +9,7 @@
 #import "Voice_Saw.h"
 #import "AQPlayer.h"
 
-#define Nmax 200
+#define Nmax 20
 
 @implementation Voice_Saw
 
