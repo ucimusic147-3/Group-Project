@@ -38,10 +38,15 @@
 -(IBAction)triButton:(id)sender;
 -(IBAction)accButton:(id)sender;
 
+// Leftmost visible key (midi)
 -(UInt8)referenceKey;
+// How many pixels off the left edge is the leftmost key?
 -(UInt8)pixelOffset;
+// How many keys away from reference key is y pixel coordinate?
 -(UInt8)keyOffset:(CGFloat)y;
+// How many semitones away from base is keyOffset?
 +(UInt8)toneOffset:(UInt8)base:(UInt8)keyOffset;
+// Map x,y to a tone (midi)
 -(UInt8)chooseTone:(CGFloat)x:(CGFloat)y;
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event;

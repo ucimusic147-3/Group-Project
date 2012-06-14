@@ -119,7 +119,6 @@ void AQRecBufferCallback (void                                *inUserData,
 
 -(void)saveAudioBuffer:(Float64*)buffer:(UInt32)num_samples
 {
-    //	NSLog(@"saveAudioBuffer %ld",writePos);
 	for (int i = 0; i < num_samples && writePos < kMaxRecBufferSize; i++)
 		audioBuffer[writePos++] = buffer[i];
 }

@@ -13,7 +13,7 @@
 
 @implementation Voice_Saw
 
-// Sawtooth wavetable from in-class example and notes
+// Sawtooth wavetable from Music 147 in-class example and notes
 -(void)fillWavetable
 {
     /* for each harmonic (outer loop) */

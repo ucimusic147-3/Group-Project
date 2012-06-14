@@ -3,7 +3,7 @@
 //  Music147_2012
 //
 //  Created by Kojiro Umezaki on 4/25/12.
-//  Refitted by Jetpack Dinosaurs 6/12
+//  Refitted by Dennis Yeh/Jetpack Dinosaurs 6/12
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
@@ -54,7 +54,6 @@
     for (UInt16 i = 0; i < kWaveTableSize; i++)
     {
         table[i] = table[i] / max;
-        //        NSLog(@"%d %f",i,table[i]);
     }
 }
 
@@ -83,10 +82,6 @@
         /* s is the interpolated table value */
         Float64 s = s0 + (s1 - s0) * k;
         
-        /* update the envelope by one sample */
-        //     [env update:1];
-        
-        //	buffer[n] += amp * env.output * s;
         
         buffer[n] += amp * s;
         

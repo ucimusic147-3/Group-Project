@@ -2,7 +2,11 @@
 //  Music147_2012
 //
 //  Created by Kojiro Umezaki on 5/2/12.
-//  Extended by Jetpack Dinosaurs 6/12.
+//  Extended by Jetpack Dinosaurs 6/12:
+//  - Button/Interface Layout by Jonathan Chen
+//  - Accelerometer and Slider UI/Functionality by Eric Riggs
+//  - Keyboard UI by Dennis Yeh
+//
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
